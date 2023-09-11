@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #161616;
 }
 
 .App-logo {
@@ -16,7 +21,7 @@
 
 .App-header {
   background-color: #161616;
-  min-height: 12vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +33,7 @@
 
 .App-nav {
   background-color: #161616;
-  min-height: 12vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,11 +43,11 @@
 }
 
 .App-button {
-  margin: 2vh;
-  min-height: 4vh;
-  padding: 1vh;
-  border-radius: 1vh;
-  font-size: calc(5px + 1vmin);
+  margin-inline: 3vh;
+  min-height: 5vh;
+  padding-inline: 2vh;
+  border-radius: 2vh;
+  font-size: calc(5px + 2vmin);
   color: #41FF00;
   background-color: #161616;
   border-color: #41FF00;
@@ -58,6 +63,24 @@
 .App-link {
   color: #61dafb;
 }
+
+.App-footer{
+  background-color: #161616;
+  margin-top: auto;
+  min-height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #41FF00;
+}
+
+.Footer-Img{
+  color:#41FF00;
+  height: 5vmin;
+  margin-inline: 2vmin;
+}
+
 
 @keyframes App-logo-spin {
   from {
