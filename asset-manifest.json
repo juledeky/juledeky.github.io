@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/port-fol/static/css/main.b1baeb6b.css",
-    "main.js": "/port-fol/static/js/main.8b10b7cf.js",
-    "static/js/787.1c5242ef.chunk.js": "/port-fol/static/js/787.1c5242ef.chunk.js",
-    "static/media/PlayMeGames-Demo.otf": "/port-fol/static/media/PlayMeGames-Demo.ddfe6291ce9a120ba0b7.otf",
-    "static/media/whitrabt.ttf": "/port-fol/static/media/whitrabt.f799899c80942f90fff7.ttf",
-    "static/media/logo.svg": "/port-fol/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/port-fol/index.html",
-    "main.b1baeb6b.css.map": "/port-fol/static/css/main.b1baeb6b.css.map",
-    "main.8b10b7cf.js.map": "/port-fol/static/js/main.8b10b7cf.js.map",
-    "787.1c5242ef.chunk.js.map": "/port-fol/static/js/787.1c5242ef.chunk.js.map"
+    "main.css": "/static/css/main.c5c9038b.css",
+    "main.js": "/static/js/main.3ab48f0a.js",
+    "static/js/787.1c5242ef.chunk.js": "/static/js/787.1c5242ef.chunk.js",
+    "static/media/PlayMeGames-Demo.otf": "/static/media/PlayMeGames-Demo.ddfe6291ce9a120ba0b7.otf",
+    "static/media/whitrabt.ttf": "/static/media/whitrabt.f799899c80942f90fff7.ttf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.c5c9038b.css.map": "/static/css/main.c5c9038b.css.map",
+    "main.3ab48f0a.js.map": "/static/js/main.3ab48f0a.js.map",
+    "787.1c5242ef.chunk.js.map": "/static/js/787.1c5242ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1baeb6b.css",
-    "static/js/main.8b10b7cf.js"
+    "static/css/main.c5c9038b.css",
+    "static/js/main.3ab48f0a.js"
   ]
 }
