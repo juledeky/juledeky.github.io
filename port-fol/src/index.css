@@ -1,13 +1,27 @@
-body {
+
+@font-face {
+  font-family: 'WhiteRabbit';
+  font-style: normal;
+  font-weight: normal;
+  src: url(./fonts/whitrabt.ttf);
+}
+
+@font-face {
+  font-family: 'PlayMeGames';
+  src: url(./fonts/PlayMeGames-Demo.otf) format('opentype');
+}
+
+body, button {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: PlayMeGames;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: PlayMeGames;
+}
+
+h1 {
+  font-weight: lighter;
 }
