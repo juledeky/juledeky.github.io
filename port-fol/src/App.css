@@ -13,15 +13,46 @@
   }
 }
 
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #161616;
+  min-height: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
+  font-size: calc(10px + 2vmin);
+  font-weight: lighter;
+  color: #41FF00;
+}
+
+.App-nav {
+  background-color: #161616;
+  min-height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #41FF00;
+}
+
+.App-button {
+  margin: 2vh;
+  min-height: 4vh;
+  padding: 1vh;
+  border-radius: 1vh;
+  font-size: calc(5px + 1vmin);
+  color: #41FF00;
+  background-color: #161616;
+  border-color: #41FF00;
+}
+
+.App-button:hover{
+  
+  color: #161616;
+  background-color: #41FF00;
+  border-color: #161616;
 }
 
 .App-link {
