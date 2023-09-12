@@ -7,10 +7,11 @@ export function Introduction() {
     return (
         <div>
             <div className="Introduction">
-                <h1>Hello and welcome to my Profile Page</h1>
+                <h1>Hello and welcome to my Website.</h1>
             </div>
             <div className="Profile">
                 <Profile />
+                <p>It is currently still under construction.</p>
             </div>
         </div>
        

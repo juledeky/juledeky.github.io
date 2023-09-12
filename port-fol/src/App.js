@@ -1,18 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './HomePage/HomePage'
+import ProjectPage from './ProjectPage/ProjectPage'
+import ContactPage from './ContactPage/ContactPage'
 import MailLogo from './img/Mail-Green.png'
 import LinkedinLogo from './img/LinkedinLogo.png'
-import { Introduction } from './HomePage/HomePage'
+import {BrowserRouter, NavLink} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+import {Routes} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navigation />
-      </header>
-        <HomePage />
-        <Footer />
+      <BrowserRouter>
+        <header className="App-header">
+          <Navigation />
+        </header>
+          <div>
+            <Routes>
+              <Route path='/Home' element={<HomePage />}/>
+              <Route path='/Projects' element={<ProjectPage />}/>
+              <Route path='/Contact' element={<ContactPage />}/>
+              <Route path="/" element={<HomePage />}/>
+              <Route path="*" element={<HomePage />}/>
+            </Routes>
+          </div>
+          <Footer />
+      </BrowserRouter>
     </div>
   );
 }
@@ -20,9 +34,9 @@ function App() {
 function Navigation() {
   return (
     <nav className="App-nav">
-      <button className="App-button"> Home </button>
-      <button className="App-button"> Projects </button>
-      <button className="App-button"> Contact me</button>
+      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
+      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
+      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me</NavLink></button>
     </nav>
   )
 }
