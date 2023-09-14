@@ -1,3 +1,4 @@
+
 .ContactPage {
     background-color: #161616;
     min-height: 12vh;
@@ -9,3 +10,45 @@
     font-weight: lighter;
     color: #41FF00;
 }
+
+input[type=text] {
+    width: 100%;
+    padding: 2vh 2vh;
+    margin: 2vh 0;
+    box-sizing: border-box;
+    border: 0.5vh solid #41FF00;
+    border-radius: 1vh;
+    background-color: #161616;
+    color: #41FF00;
+}
+
+input[type=submit]{
+    margin-inline: 3vh;
+    min-height: 5vh;
+    padding-inline: 2vh;
+    border-radius: 2vh;
+    font-size: calc(5px + 2vmin);
+    color: #41FF00;
+    background-color: #161616;
+    border-color: #41FF00;
+    font: inherit
+}
+
+input[type=submit]:hover {
+    color: #161616;
+    background-color: #41FF00;
+    border-color: #161616;
+}
+
+textarea{
+    width: 100%;
+    padding: 2vh 2vh;
+    margin: 2vh 0;
+    box-sizing: border-box;
+    border: 0.5vh solid #41FF00;
+    border-radius: 1vh;
+    background-color: #161616;
+    color: #41FF00;
+    resize: none;
+}
+
