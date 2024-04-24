@@ -1,5 +1,5 @@
 .HomePage {
-    background-color: #161616;
+    background-color: #F2F2F0;
     min-height: 12vh;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     justify-content: start;
     font-size: calc(10px + 2vmin);
     font-weight: lighter;
-    color: #41FF00;
+    color: #0D0D0D;
 }
 
 .Profile img {

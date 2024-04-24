@@ -1,4 +1,5 @@
 import './HomePage.css';
+import ProfilePic from '../img/SelfPortrait2.jpg'
 
 
 
@@ -22,8 +23,8 @@ export function Introduction() {
 function Profile(){
     return (
         <img className="ProfilePic" 
-            src="https://art.pixilart.com/sr24f9edfb668aws3.png"
-            alt="Self Portrait in Pixel Art"
+            src={ProfilePic}
+            alt="Picture of me standing on one leg on a path in a forest."
         />
     );
 }

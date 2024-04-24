@@ -3,7 +3,7 @@ import './App.css';
 import HomePage from './HomePage/HomePage'
 import ProjectPage from './ProjectPage/ProjectPage'
 import ContactPage from './ContactPage/ContactPage'
-import MailLogo from './img/Mail-Green.png'
+import MailLogo from './img/Mail.png'
 import LinkedinLogo from './img/LinkedinLogo.png'
 import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
@@ -44,8 +44,10 @@ function Navigation() {
 function Footer() {
   return (
     <div className="App-footer">
-      <a href="mailto:jule.dekyvere@gmail.com"><img className="Footer-Img" src={MailLogo} alt="Mailing logo"></img></a>
-      <a href="https://www.linkedin.com/in/jule-dekyvere/"><img className="Footer-Img" src={LinkedinLogo} alt="Logo of LinkedIn"></img></a>
+      <div className="Footer-content">
+        <a href="mailto:jule.dekyvere@gmail.com"><img className="Footer-Img" src={MailLogo} alt="Mailing logo"></img></a>
+        <a href="https://www.linkedin.com/in/jule-dekyvere/"><img className="Footer-Img" src={LinkedinLogo} alt="Logo of LinkedIn"></img></a>
+      </div>
     </div>
   );
 }
