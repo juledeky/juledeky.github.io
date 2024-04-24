@@ -1,0 +1,112 @@
+.ProfilePage {
+    background-color: #F2F2F0;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: calc(10px + 1vmin);
+    font-weight: lighter;
+    color: #0D0D0D;
+    margin-bottom: 5vmin;
+}
+
+.SpotifyAPI{
+    /*border-radius:12px;*/
+    max-height: 1000px;
+    max-width:1500px;
+    min-width:350px;
+    width: 90%;
+    margin:5%;
+}
+
+.Project{
+    width:80%;
+    max-width:1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content:center;
+}
+
+.Beschrijving{
+    width:50%;
+    color:#0D0D0D;
+    /*border:#0D0D0D;*/
+    height:250px;
+    /*border-style: solid;*/
+    background-color: #BFBEAA;
+    align-content:center;
+}
+
+.BeschrijvingInhoudLinks{
+    text-align: left;
+    margin-left:2vmin;
+    margin-right:2vmin;
+}
+
+.BeschrijvingInhoudRechts{
+    text-align: right;
+    margin-right:2vmin;
+    margin-left:2vmin;
+}
+
+.EmbeddedProject{
+    width:50%;
+    /*border:#0D0D0D;*/
+    /*height:250px;*/
+    /*border-style: solid;*/
+    align-content:center;
+}
+
+.SoundCloudLinksDiv{
+    font-size: 10px; 
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+}
+
+#SoundcloudAPI{
+    flex:50%;
+}
+#SoundcloudBeschrijving{
+    flex:50%;
+}
+
+.SoundCloudLinksA{
+    color: #cccccc; 
+    text-decoration: none;
+}
+
+.Beschrijving h3{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: calc(10px + 0.5vmin);
+    text-align: justify;
+}
+
+.Socials{
+    width: 100%;
+    align-content: right;
+    text-align: right;
+}
+
+.fa{
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}

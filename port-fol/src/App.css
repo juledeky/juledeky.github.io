@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 
 .App-header {
   background-color: #735646;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,22 +33,23 @@
 
 .App-nav {
   background-color: #735646;
-  min-height: 10vh;
+  min-height: 6vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: #BFBEAA;
 }
 
 .App-button {
-  margin-inline: 3vh;
-  min-height: 5vh;
+  margin-inline: 2vh;
+  min-height: 2vh;
   padding-inline: 2vh;
   border-radius: 0.5vh;
-  border-style: solid;
-  font-size: calc(5px + 2vmin);
+  border-width: 0.1vh;
+  border-style: none;
+  font-size: calc(10px + 1vmin);
   color: #BFBEAA;
   background-color: #735646;
   border-color: #BFBEAA;

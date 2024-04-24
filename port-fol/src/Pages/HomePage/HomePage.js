@@ -1,5 +1,5 @@
 import './HomePage.css';
-import ProfilePic from '../img/SelfPortrait2.jpg'
+import ProfilePic from '../../Resources/img/SelfPortrait2.jpg'
 
 
 

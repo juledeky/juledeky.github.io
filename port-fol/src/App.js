@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import HomePage from './HomePage/HomePage'
-import ProjectPage from './ProjectPage/ProjectPage'
-import ContactPage from './ContactPage/ContactPage'
-import MailLogo from './img/Mail.png'
-import LinkedinLogo from './img/LinkedinLogo.png'
+import HomePage from './Pages/HomePage/HomePage'
+import ProjectPage from './Pages/ProjectPage/ProjectPage'
+import ContactPage from './Pages/ContactPage/ContactPage'
+import CVPage from './Pages/CVPage/CVPage'
+import MailLogo from './Resources/img/Mail.png'
+import LinkedinLogo from './Resources/img/LinkedinLogo.png'
 import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import {Routes} from 'react-router-dom'
@@ -21,6 +22,7 @@ function App() {
               <Route path='/Home' element={<HomePage />}/>
               <Route path='/Projects' element={<ProjectPage />}/>
               <Route path='/Contact' element={<ContactPage />}/>
+              <Route path='/CurriculumVitae' element={<CVPage />}/>
               <Route path="/" element={<HomePage />}/>
               <Route path="*" element={<HomePage />}/>
             </Routes>
@@ -36,7 +38,8 @@ function Navigation() {
     <nav className="App-nav">
       <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
       <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me</NavLink></button>
+      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me </NavLink></button>
+      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
     </nav>
   )
 }
