@@ -13,6 +13,7 @@ import {Routes} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <BrowserRouter>
         <header className="App-header">
           <Navigation />
@@ -33,23 +34,29 @@ function App() {
   );
 }
 
+//      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me </NavLink></button>
+
 function Navigation() {
   return (
     <nav className="App-nav">
       <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
       <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me </NavLink></button>
       <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
     </nav>
   )
 }
 
+//<a href="https://www.instagram.com/onwinepodcast/" class="fa fa-instagram"></a>
+
 function Footer() {
   return (
     <div className="App-footer">
       <div className="Footer-content">
-        <a href="mailto:jule.dekyvere@gmail.com"><img className="Footer-Img" src={MailLogo} alt="Mailing logo"></img></a>
-        <a href="https://www.linkedin.com/in/jule-dekyvere/"><img className="Footer-Img" src={LinkedinLogo} alt="Logo of LinkedIn"></img></a>
+        <a href="mailto:jule.dekyvere@gmail.com" class="fa fa-envelope"alt="Mailing logo"></a>
+        <a href="https://www.linkedin.com/in/jule-dekyvere/" class="fa fa-linkedin" alt="Logo of LinkedIn"></a>
+        <a href="https://https://github.com/juledek" class="fa fa-github" alt="Logo of github"></a>
+        <a href="https://soundcloud.com/user-432649769" class="fa fa-soundcloud" alt="Logo of soundcloud"></a>
+        <p>Deze webpagina maakt geen gebruik van cookies en uw data wordt niet opgeslagen en/of doorverkocht.</p>
       </div>
     </div>
   );

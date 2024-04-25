@@ -97,12 +97,28 @@
   align-content: center;
 }
 
+.Footer-content p{
+  font-size: xx-small;
+  color:#BFBEAA;
+}
+
 .Footer-Img{
   color:#F2F2F0;
   height: 5vmin;
   margin-inline: 2vmin;
 }
 
+.fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color:#BFBEAA;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
 
 @keyframes App-logo-spin {
   from {

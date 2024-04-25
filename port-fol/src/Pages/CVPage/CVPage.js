@@ -1,5 +1,5 @@
 import './CVPage.css';
-import CV from '../../Resources/CV2024.pdf'
+import CV from '../../Resources/CV-2024.pdf'
 
 export default function CVPage() {
    return (

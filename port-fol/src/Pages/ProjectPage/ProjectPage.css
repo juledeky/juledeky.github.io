@@ -1,106 +1,132 @@
-.ProfilePage {
-    background-color: #F2F2F0;
-    min-height: 12vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    font-size: calc(10px + 1vmin);
-    font-weight: lighter;
-    color: #0D0D0D;
-    margin-bottom: 5vmin;
+.ProjectPage {
+    display: grid;
+    grid-template-columns: 1fr; /* Create one column */
+    gap: 0; /* No gap between grid items */
+    justify-items: center; /* Center items horizontally */
 }
 
-.SpotifyAPI{
-    /*border-radius:12px;*/
-    max-height: 1000px;
-    max-width:1500px;
-    min-width:350px;
-    width: 90%;
-    margin:5%;
-}
-
-.Project{
-    width:80%;
-    max-width:1000px;
+.Project {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content:center;
+    width: 100%; /* Take up full width of parent container */
 }
 
-.Beschrijving{
-    width:50%;
-    color:#0D0D0D;
-    /*border:#0D0D0D;*/
-    height:250px;
-    /*border-style: solid;*/
+.Beschrijving,
+.EmbeddedProject {
+    width: 50%; /* Each div takes up 50% of the row */
+    height: 250px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    /*align-items: flex-end; /* Center content vertically */
+}
+
+.Beschrijving { /*LEFT*/
     background-color: #BFBEAA;
-    align-content:center;
+    color: #0D0D0D;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-end;
+    padding-right:20px;
 }
 
-.BeschrijvingInhoudLinks{
-    text-align: left;
-    margin-left:2vmin;
-    margin-right:2vmin;
+.EmbeddedProject { /*RIGHT*/
+    /*background-color: #C0C0C0;*/
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start;
+    padding-left:20px;
+    
 }
 
-.BeschrijvingInhoudRechts{
-    text-align: right;
-    margin-right:2vmin;
-    margin-left:2vmin;
+/* For the second row, reverse the order */
+.Project:nth-child(odd) .Beschrijving {
+    order: 2; /* Beschrijving on the right in odd rows */
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.EmbeddedProject{
-    width:50%;
-    /*border:#0D0D0D;*/
-    /*height:250px;*/
-    /*border-style: solid;*/
-    align-content:center;
+.Project h3{
+    text-align: end;
 }
 
-.SoundCloudLinksDiv{
-    font-size: 10px; 
-    color: #cccccc;
-    line-break: anywhere;
-    word-break: normal;
+.Project:nth-child(odd) h3{
+    text-align: start;
+}
+
+.Project:nth-child(odd) .EmbeddedProject {
+    order: 1; /* EmbeddedProject on the left in odd rows */
+    align-items: flex-end;
+}
+
+.BeschrijvingInhoud{
+    max-width: 80%;
+    height:90%;
+}
+
+.BeschrijvingInhoud p, h3{
+    padding:10px;
+}
+
+.BeschrijvingInhoud p{
+    padding-top: 0;
+}
+
+.BeschrijvingInhoud h3{
+    padding-bottom: 0;
+}
+
+iframe{
+    width:80%;
+}
+
+.SoundCloudLinksDiv {
+    font-size: 10px;
+    color: #F2F2F0;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; 
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    text-overflow: ellipsis;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
     font-weight: 100;
 }
 
-#SoundcloudAPI{
-    flex:50%;
-}
-#SoundcloudBeschrijving{
-    flex:50%;
+#PodcastAPI{
+    background-image: url('../../Resources//img/Podcast.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.SoundCloudLinksA{
-    color: #cccccc; 
+#SoundcloudAPI{
+    background-image: url('../../Resources//img/Gitaar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#NextProjectAPI{
+    background-image: url('../../Resources//img/KunstMama.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#NextProjectAPI p{
+    background-color: #F2F2F0;
+    padding:20px;
+}
+
+p {
+    font-size: calc(10px + 0.5vmin);
+    text-align: justify;
+    border-radius: 1%;
+}
+
+
+.SoundCloudLinksA {
+    color: #F2F2F0;
     text-decoration: none;
 }
 
-.Beschrijving h3{
-    margin: 0;
-    padding: 0;
-}
-
-p{
-    font-size: calc(10px + 0.5vmin);
-    text-align: justify;
-}
-
-.Socials{
-    width: 100%;
-    align-content: right;
-    text-align: right;
-}
-
-.fa{
+.fa {
     font-size: 30px;
     width: 50px;
     text-align: center;
@@ -110,3 +136,11 @@ p{
 .fa:hover {
     opacity: 0.7;
 }
+
+/**@media screen and (max-width: 768px) {
+    /* Add responsive styles if needed 
+}
+
+@media screen and (max-width: 480px) {
+    /* Add responsive styles if needed 
+}*/

@@ -6,15 +6,19 @@ import ProfilePic from '../../Resources/img/SelfPortrait2.jpg'
 export function Introduction() {
     //Component with text in it as wel as a profile picture
     return (
-        <div>
-            <div className="Introduction">
-                <h1>Hello and welcome to my Website.</h1>
-            </div>
-            <div className="Profile">
-                <Profile />
-                <p>It is currently still under construction.</p>
+        <div class="content-column">
+            <div class="text-content">
+                <h3>Hey! Ik ben Jule.</h3>
+                <p>Als een toegewijde softwareontwikkelaar, richt ik mij op het bevorderen 
+                    van gendergelijkheid en diversiteit binnen de technologische sector. 
+                    Met een passie voor het creëren van inclusieve en rechtvaardige oplossingen, 
+                    ben ik vastbesloten om mijn vaardigheden in te zetten om positieve verandering 
+                    te bewerkstelligen. Mijn streven is om innovatieve software te ontwikkelen die 
+                    niet alleen technologische vooruitgang vertegenwoordigt, maar ook bijdraagt aan 
+                    een meer diverse en inclusieve samenleving. (Bedankt ChatGPT) </p>
             </div>
         </div>
+
        
     );
 
@@ -22,17 +26,28 @@ export function Introduction() {
 
 function Profile(){
     return (
-        <img className="ProfilePic" 
-            src={ProfilePic}
-            alt="Picture of me standing on one leg on a path in a forest."
-        />
+            <div class="image-column">
+                <img className="ProfilePic" 
+                    src={ProfilePic}
+                    alt="Picture of me standing on one leg on a path in a forest."
+                />
+            </div>
+            
+        
     );
 }
 
 export default function HomePage() {
     return (
         <div className="HomePage">
-            <Introduction />
+            <div className='container'>
+                <Profile />
+                
+                <Introduction />
+                
+                <div class="black-block"></div>
+            </div>
+            
         </div>
     );
 }
