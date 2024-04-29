@@ -39,10 +39,13 @@ function App() {
 function Navigation() {
   return (
     <nav className="App-nav">
-      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
-      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
-    </nav>
+      <h4 className="Nav-titel">Jule Dekyvere</h4>
+      <div className="App-buttons">
+        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
+        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
+        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
+      </div>
+       </nav>
   )
 }
 
@@ -54,7 +57,7 @@ function Footer() {
       <div className="Footer-content">
         <a href="mailto:jule.dekyvere@gmail.com" class="fa fa-envelope"alt="Mailing logo"></a>
         <a href="https://www.linkedin.com/in/jule-dekyvere/" class="fa fa-linkedin" alt="Logo of LinkedIn"></a>
-        <a href="https://https://github.com/juledek" class="fa fa-github" alt="Logo of github"></a>
+        <a href="https://github.com/juledek" class="fa fa-github" alt="Logo of github"></a>
         <a href="https://soundcloud.com/user-432649769" class="fa fa-soundcloud" alt="Logo of soundcloud"></a>
         <p>Deze webpagina maakt geen gebruik van cookies en uw data wordt niet opgeslagen en/of doorverkocht.</p>
       </div>

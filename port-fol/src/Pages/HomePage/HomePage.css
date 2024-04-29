@@ -53,6 +53,7 @@ html, body {
     display:flex;
     flex-direction: column;
     min-height: 250px;
+    max-height: 250px;
     margin-right: 100px;
 }
 
@@ -70,4 +71,27 @@ html, body {
     height: 250px; /* Adjust height as needed */
     position: absolute;
     z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .someElement {
+        /* Styles for screens smaller than 600px */
+        .black-block {
+            background-color: #BFBEAA;
+            width: 100%;
+            height: 100%; /* Adjust height as needed */
+            position: absolute;
+            z-index: 0;
+        }
+        .container {
+            display: flex;
+            /* Adjust alignment and spacing as needed */
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            /*justify-content: ;*/
+            height: 80vh;
+        }
+    }
 }
