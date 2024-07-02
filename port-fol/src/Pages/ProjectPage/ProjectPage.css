@@ -1,0 +1,150 @@
+.ProjectPage {
+    display: grid;
+    grid-template-columns: 1fr; /* Create one column */
+    gap: 0; /* No gap between grid items */
+    justify-items: center; /* Center items horizontally */
+}
+
+.Project {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Take up full width of parent container */
+}
+
+.Beschrijving,
+.EmbeddedProject {
+    width: 50%; /* Each div takes up 50% of the row */
+    height: 250px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    /*align-items: flex-end; /* Center content vertically */
+}
+
+.Beschrijving { /*LEFT*/
+    background-color: #BFBEAA;
+    color: #0D0D0D;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-end;
+    padding-right:20px;
+}
+
+.EmbeddedProject { /*RIGHT*/
+    /*background-color: #C0C0C0;*/
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start;
+    padding-left:20px;
+    
+}
+
+/* For the second row, reverse the order */
+.Project:nth-child(odd) .Beschrijving {
+    order: 2; /* Beschrijving on the right in odd rows */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Project h3{
+    text-align: end;
+}
+
+.Project:nth-child(odd) h3{
+    text-align: start;
+}
+
+.Project:nth-child(odd) .EmbeddedProject {
+    order: 1; /* EmbeddedProject on the left in odd rows */
+    align-items: flex-end;
+}
+
+.BeschrijvingInhoud{
+    max-width: 80%;
+    height:90%;
+}
+
+.BeschrijvingInhoud p, h3{
+    padding:10px;
+}
+
+.BeschrijvingInhoud p{
+    padding-top: 0;
+}
+
+.BeschrijvingInhoud h3{
+    padding-bottom: 0;
+}
+
+iframe{
+    width:80%;
+}
+
+.SoundCloudLinksDiv {
+    font-size: 10px;
+    color: #F2F2F0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+#PodcastAPI{
+    background-image: url('../../Resources//img/Podcast.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#SoundcloudAPI{
+    background-image: url('../../Resources//img/Gitaar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#NextProjectAPI{
+    background-image: url('../../Resources//img/KunstMama.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#NextProjectAPI p{
+    background-color: #F2F2F0;
+    padding:20px;
+}
+
+p {
+    font-size: calc(10px + 0.5vmin);
+    text-align: justify;
+    border-radius: 1%;
+}
+
+h3{
+    color:#735646;
+}
+
+
+.SoundCloudLinksA {
+    color: #F2F2F0;
+    text-decoration: none;
+}
+
+.fa {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/**@media screen and (max-width: 768px) {
+    /* Add responsive styles if needed 
+}
+
+@media screen and (max-width: 480px) {
+    /* Add responsive styles if needed 
+}*/

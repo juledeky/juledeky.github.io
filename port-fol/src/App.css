@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #161616;
+  background-color: #F2F2F0;
 }
 
 .App-logo {
@@ -18,51 +18,58 @@
   }
 }
 
+h4{
+  margin: 2.5vh;
+}
+
 
 .App-header {
-  background-color: #161616;
-  min-height: 10vh;
+  background-color: #735646;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   font-size: calc(10px + 2vmin);
   font-weight: lighter;
-  color: #41FF00;
+  color: #BFBEAA;
 }
 
 .App-nav {
-  background-color: #161616;
-  min-height: 10vh;
+  background-color: #735646;
+  min-height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #41FF00;
+  justify-content: space-between;
+  width: 90%;
+  font-size: calc(10px + 1vmin);
+  color: #BFBEAA;
 }
 
 .App-button {
-  margin-inline: 3vh;
-  min-height: 5vh;
-  padding-inline: 2vh;
-  border-radius: 2vh;
-  font-size: calc(5px + 2vmin);
-  color: #41FF00;
-  background-color: #161616;
-  border-color: #41FF00;
+  margin-inline: 2vh;
+  min-height: 2vh;
+  padding: 1vh;
+  border-radius: 0.1vh;
+  border-width: 0.1vh;
+  border-style: none;
+  font-size: calc(10px + 1vmin);
+  color: #BFBEAA;
+  background-color: #735646;
+  border-color: #BFBEAA;
 }
 
 .App-button:hover{
   
-  color: #161616;
-  background-color: #41FF00;
-  border-color: #161616;
+  color: #735646;
+  background-color: #BFBEAA;
+  border-color: #735646;
 }
 
 .nav_link--active{
   color: #161616;
-  background-color: #41FF00;
+  background-color: #F2F2F0;
   border-color: #161616;
   text-decoration: none;
 }
@@ -81,22 +88,42 @@
 }
 
 .App-footer{
-  background-color: #161616;
+  background-color: #0D0D0D;
   margin-top: auto;
   min-height: 12vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #41FF00;
+  color: #F2F2F0;
+}
+
+.Footer-content{
+  align-content: center;
+}
+
+.Footer-content p{
+  font-size: xx-small;
+  color:#BFBEAA;
 }
 
 .Footer-Img{
-  color:#41FF00;
+  color:#F2F2F0;
   height: 5vmin;
   margin-inline: 2vmin;
 }
 
+.fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color:#BFBEAA;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
 
 @keyframes App-logo-spin {
   from {
