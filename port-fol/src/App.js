@@ -8,6 +8,7 @@ import MailLogo from './Resources/img/Mail.png'
 import LinkedinLogo from './Resources/img/LinkedinLogo.png'
 import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
+import React, {useState} from 'react';
 import {Routes} from 'react-router-dom'
 
 function App() {
@@ -37,15 +38,25 @@ function App() {
 //      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me </NavLink></button>
 
 function Navigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="App-nav">
       <h4 className="Nav-titel">Jule Dekyvere</h4>
-      <div className="App-buttons">
-        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
-        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-        <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
+      <div className="NavigationMenu" onClick={() => {setMenuOpen(!menuOpen)}}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-       </nav>
+      <div className="App-buttons" id={menuOpen ? "open" : ""}>
+        <div >
+          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
+          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
+          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
+        
+        
+        </div>
+      </div>
+    </nav>
   )
 }
 

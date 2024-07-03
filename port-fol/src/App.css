@@ -133,3 +133,65 @@ h4{
     transform: rotate(360deg);
   }
 }
+
+/*----------------*/
+
+.App-nav .NavigationMenu{
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 1.5rem;
+}
+
+.App-nav .NavigationMenu span{
+  height: 0.2rem;
+  width: 100%;
+  background-color: #BFBEAA;
+  border-radius: 0.5rem;
+}
+
+.App-nav .App-button .open{
+  display: block;
+}
+
+/*------------------*/
+
+@media only screen and (max-width: 480px) {
+  .App-nav{
+    display: block;
+  }
+
+  .App-nav .NavigationMenu {
+    display: flex;
+  }
+
+  .App-nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .App-nav .App-buttons {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+  }
+
+  .App-nav .App-buttons#open {
+      display: flex;
+  }
+
+  .App-nav .App-buttons .App-button {
+      width: 100%;
+      text-align: center;
+  }
+
+  .App-nav .App-buttons .App-button a {
+      margin: 0.2rem 0.5rem;
+  }
+  
+}
