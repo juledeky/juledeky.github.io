@@ -141,10 +141,37 @@ h3{
     opacity: 0.7;
 }
 
-/**@media screen and (max-width: 768px) {
-    /* Add responsive styles if needed 
+@media only screen and (max-width: 768px) {
+    /* Add responsive styles if needed */
+    .Project{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Beschrijving{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    #PodcastBeschrijving, #SoundcloudBeschrijving, #NextProjectBeschrijving{
+        align-items: center;
+        order: 0;
+    }
+
+    .Project:nth-child(even) .EmbeddedProject{
+        width: 100%;
+        align-items: center;
+        padding:0%;
+    }
+
+    .Project:nth-child(odd) .EmbeddedProject{
+        width: 100%;
+        align-items: center;
+        padding: 0%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    /* Add responsive styles if needed 
-}*/
+    /* Add responsive styles if needed */
+}
