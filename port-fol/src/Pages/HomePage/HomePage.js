@@ -18,8 +18,6 @@ export function Introduction() {
                     een meer diverse en inclusieve samenleving. (Bedankt ChatGPT) </p>
             </div>
         </div>
-
-       
     );
 
 }
@@ -32,22 +30,22 @@ function Profile(){
                     alt="Picture of me standing on one leg on a path in a forest."
                 />
             </div>
-            
-        
     );
 }
 
 export default function HomePage() {
     return (
         <div className="HomePage">
-            <div className='container'>
-                <Profile />
-                
-                <Introduction />
-                
-                <div class="black-block"></div>
+            <div className="container">
+                <div class="black-block">
+                    <div class="firstHalve">
+                        <Profile />
+                    </div>
+                    <div class="secondHalve">
+                        <Introduction />
+                    </div>
+                </div>
             </div>
-            
         </div>
     );
 }

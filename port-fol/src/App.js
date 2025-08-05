@@ -10,6 +10,8 @@ import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
 import {Routes} from 'react-router-dom'
+import MCEVERGEMPage from './Pages/MCEVERGEMPage/MCEVERGEMPage'
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
               <Route path='/CurriculumVitae' element={<CVPage />}/>
               <Route path="/" element={<HomePage />}/>
               <Route path="*" element={<HomePage />}/>
+              <Route path="/MCEVERGEM" element={<MCEVERGEMPage />}/>
             </Routes>
           </div>
           <Footer />
@@ -43,15 +46,13 @@ function Navigation() {
     <nav className="App-nav">
       <h4 className="Nav-titel">Jule Dekyvere</h4>
       <div className="NavigationMenu" onClick={() => {setMenuOpen(!menuOpen)}}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="fa fa-navicon" alt="Navigation menu"></div>
       </div>
       <div className="App-buttons" id={menuOpen ? "open" : ""}>
         <div >
-          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
-          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-          <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
+          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
+          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
+          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
         
         
         </div>

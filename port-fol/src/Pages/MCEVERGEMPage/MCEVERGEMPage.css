@@ -1,0 +1,209 @@
+.MCEVERGEMPage {
+    display: flex;
+    flex-direction: column;
+    justify-items: center; /* Center items horizontally */
+}
+
+.Title{
+    background-color: #F2F2F0;
+    color: #735646;
+}
+.Title h1{
+    font-weight: bold;
+}
+
+.ProjectLinks{
+    padding: 1%;
+    background-color: #735646;
+    border-bottom: 1px solid #735646;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ProjectLinks .fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.ProjectLinks img{
+    max-height: 30px;
+    width: auto;
+    border: none;
+}
+
+.ProjectLinks .IconBg{
+    background-color:#F2F2F0;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+     justify-content: center;
+}
+
+.ProjectLinks .fa:hover {
+  opacity: 0.7;
+}
+
+.Container{
+    margin-inline: 10%;
+    max-width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.Container img{
+    height: 150px;
+    width: auto;
+}
+
+.Beschrijving,
+.EmbeddedProject {
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    /*align-items: flex-end; /* Center content vertically */
+}
+
+.Beschrijving { /*LEFT*/
+    color: #0D0D0D;
+    justify-content: center; /* Center content horizontally */
+    padding-right:20px;
+}
+
+.EmbeddedProject { /*RIGHT*/
+    /* background-color: white; */
+    width: 75%;
+    justify-content: center; /* Center content horizontally */
+    padding-left:20px;
+    
+}
+
+
+.Project h3{
+    text-align: end;
+}
+
+
+.BeschrijvingInhoud{
+    max-width: 80%;
+    height:90%;
+}
+
+iframe{
+    width:80%;
+}
+
+p {
+    font-size: calc(10px + 0.5vmin);
+    text-align: justify;
+    border-radius: 1%;
+}
+
+h3{
+    color:#735646;
+}
+
+img{
+    border: 1px solid #735646;
+}
+
+.fa {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.UitbreidingFlowchart{
+    background-color: #F2F2F0;
+}
+
+.Uitbreiding img{
+    width:90%;
+    margin:5%;
+    margin-top:2%;
+}
+
+.Uitbreiding h2{
+    padding-top: 3%;
+}
+
+.UitgebreideUitleg{
+    margin-top:5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Image{
+    display: flex;
+    flex-direction: column;
+}
+
+.Stap{
+    min-width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Stap img{
+    width: auto;
+    padding-right:0;
+    margin-right: 0;
+    height:350px;
+    margin-top: 5%;
+    border: 5px solid #000000;
+}
+
+#Uitleg {
+    padding-right:2%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Add responsive styles if needed */
+    .Project{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Beschrijving{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    #PodcastBeschrijving, #SoundcloudBeschrijving, #NextProjectBeschrijving{
+        align-items: center;
+        order: 0;
+    }
+
+    .Project:nth-child(even) .EmbeddedProject{
+        width: 100%;
+        align-items: center;
+        padding:0%;
+    }
+
+    .Project:nth-child(odd) .EmbeddedProject{
+        width: 100%;
+        align-items: center;
+        padding: 0%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Add responsive styles if needed */
+}
