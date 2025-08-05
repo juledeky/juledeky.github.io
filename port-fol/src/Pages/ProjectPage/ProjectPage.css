@@ -9,20 +9,23 @@
     display: flex;
     flex-direction: row;
     width: 100%; /* Take up full width of parent container */
+    min-height:350px;
+    align-items: center;
 }
 
 .Beschrijving,
 .EmbeddedProject {
     width: 50%; /* Each div takes up 50% of the row */
-    height: 250px; /* Adjust height as needed */
+    height: 400px; /* Adjust height as needed */
     display: flex;
     flex-direction: column;
     padding:20px;
+    margin: 50px;
     /*align-items: flex-end; /* Center content vertically */
 }
 
 .Beschrijving { /*LEFT*/
-    background-color: #BFBEAA;
+    /* background-color: white; */
     color: #0D0D0D;
     justify-content: center; /* Center content horizontally */
     align-items: flex-end;
@@ -30,11 +33,15 @@
 }
 
 .EmbeddedProject { /*RIGHT*/
-    /*background-color: #C0C0C0;*/
+    /* background-color: white; */
     justify-content: center; /* Center content horizontally */
     align-items: flex-start;
     padding-left:20px;
     
+}
+
+.Project:nth-child(odd){
+    background-color:#F2F2F0;
 }
 
 /* For the second row, reverse the order */
@@ -86,6 +93,20 @@ iframe{
     text-overflow: ellipsis;
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
     font-weight: 100;
+}
+
+#MCEAPI{
+    background-image: url('../../Resources//img/ServiceRapportApp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+#HLGAPI{
+    background-image: url('../../Resources//img/HLG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
 }
 
 #PodcastAPI{

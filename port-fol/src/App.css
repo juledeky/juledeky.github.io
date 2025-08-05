@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #F2F2F0;
+  background-color: white;
 }
 
 .App-logo {
@@ -47,7 +47,7 @@ h4{
   color: #BFBEAA;
 }
 
-.App-button {
+.App-button-header {
   margin-inline: 2vh;
   min-height: 2vh;
   padding: 1vh;
@@ -60,11 +60,33 @@ h4{
   border-color: #BFBEAA;
 }
 
-.App-button:hover{
+.App-button-header:hover{
   
   color: #735646;
   background-color: #BFBEAA;
   border-color: #735646;
+}
+
+.App-button{
+  margin-inline: 2vh;
+  min-height: 2vh;
+  padding: 1vh;
+  border-radius: 0.1vh;
+  border-width: 0.1vh;
+  border-style: none;
+  font-size: calc(10px + 0.5vmin);
+  color: white;
+  background-color: #735646;
+  border-color: #BFBEAA;
+  border-radius: 5%;
+}
+
+.App-button:hover{
+  color: #735646;
+  background-color: white;
+  /* border-color: #735646;
+  border-width:0.2vh; */
+  border: 0.2vh, solid, #735646
 }
 
 .nav_link--active{
@@ -95,6 +117,7 @@ h4{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #F2F2F0;
+  margin-bottom: 0;
 }
 
 .Footer-content{

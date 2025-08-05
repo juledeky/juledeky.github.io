@@ -1,8 +1,38 @@
 import './ProjectPage.css'
+import Navigation from '../../Routes'
+import {BrowserRouter, NavLink} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+import React, {useState} from 'react';
 
 export default function ProjectPage() {
+
     return (
         <div className="ProfilePage">
+            <div className="Project" id="MCEVERGEM">
+                <div className="Beschrijving" id="MCEBeschrijving" >
+                    <div className="BeschrijvingInhoud">
+                        <h3>MCE Evergem - Service Rapport App</h3>
+                        <p>Na het starten met de opleiding Gender en Diversiteit, begon ik als jobstudent te werken bij MCE om een software applicatie te bouwen om hun administratieve lasten te verlichten.
+                        </p>
+                        <NavLink activeClassName="nav_link--active" className="nav_link" to="/MCEVERGEM"><button className="App-button"  > Lees meer </button></NavLink>
+                    </div>
+                </div>
+                <div className="EmbeddedProject" id="MCEAPI">
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                </div>
+            </div>
+            <div className="Project" id="HLG">
+                <div className="Beschrijving" id="HLGBeschrijving" >
+                    <div className="BeschrijvingInhoud">
+                        <h3>Hubert Lampo Genootschap</h3>
+                        <p>Op vraag van de bestuursleden van het Hubert Lampo Genootschap verfris ik langzaam hun nieuwe website via Wordpress.</p>
+                        <a href='https://hubertlampogenootschap.be/'><button className="App-button"  >Bezoek de website</button></a>
+                    </div>
+                </div>
+                <div className="EmbeddedProject" id="HLGAPI">
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                </div>
+            </div>
             <div className="Project" id="Podcast">
                 <div className="Beschrijving" id="PodcastBeschrijving" >
                     <div className="BeschrijvingInhoud">
@@ -19,7 +49,7 @@ export default function ProjectPage() {
                     <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
-            <div className="Project" id="Soundcloud">
+            <div className="Project" id="Soundcloud"> 
                 <div className="Beschrijving" id="SoundcloudBeschrijving">
                     <div className="BeschrijvingInhoud">
                         <h3>Ik maak muziek!</h3>
@@ -52,3 +82,4 @@ export default function ProjectPage() {
         </div>
     );
 }
+
