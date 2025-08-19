@@ -3,12 +3,175 @@ import Navigation from '../../Routes'
 import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
+import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+import { Descriptions, Dropdown, Space } from 'antd';
+import { TwitterOutlined, LinkedinOutlined, FacebookOutlined } from "@ant-design/icons";
+
+const items = [
+  {key: '1', label: (
+      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+        Software projects
+      </a>
+    ), },
+  {key: '2', label: (
+      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+        Sound Projects
+      </a>
+    ), icon: <SmileOutlined />,
+  },
+  {key: '0',label: (
+      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+        Delete selection
+      </a>
+    ),
+  }
+];
+
+
+
+const socialIcons = {
+  twitter: <TwitterOutlined />,
+  linkedin: <LinkedinOutlined />,
+  facebook: <FacebookOutlined />
+};
+
+const projects = [{
+    id:"MCE",
+    title: "MCE Evergem - Service Rapport App",
+    description: "Na het starten met de opleiding Gender en Diversiteit, begon ik als jobstudent te werken bij MCE om een software applicatie te bouwen om hun administratieve lasten te verlichten.",
+    link:"/MCEVERGEM",
+    linkType:"internal",
+    image:"",
+    Type:"Software"
+},
+{
+    id:"HLG",
+    title: "Hubert Lampo Genootschap",
+    description: "Op vraag van de bestuursleden van het Hubert Lampo Genootschap verfris ik langzaam hun nieuwe website via Wordpress.",
+    link:"https://hubertlampogenootschap.be",
+    linkType:"external",
+    image:"",
+    Type:"Software"
+
+},
+{
+    id:"Podcast",
+    title: "On Wine Podcast",
+    description: "Samen met Wies Ballekens maak ik sporadisch een aflevering van onze podcast On Wine. Wies houdt zich bezig met de inhoudelijke kant, en ik verzorg de technische aspecten. Beluister nu onze meest recente aflevering!",
+    ImageEmbedLinkFrame: {__html: '<iframe className="SpotifyAPI" height="80px" "600px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'},
+    image:"",
+    Type:"Sound",
+    socials: {
+        type: "instagram", url: "https://www.instagram.com/onwinepodcast/"
+    }
+},
+{
+    id:"SoundcloudMusic",
+    title: "Muzikale creaties",
+    description: "Een van mijn vrijetijdsbestedingen is het creëren van muziek, hoewel het niet van professionele kwaliteit is, geniet ik er toch van als vorm van ontspanning. Voel je vrij om mijn nieuwste nummer te beluisteren.",
+    ImageEmbedLinkFrame: {__html: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1648218918&color=ff5500"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-432649769" title="JD" target="_blank" style="color: #cccccc; text-decoration: none;">JD</a> · <a href="https://soundcloud.com/user-432649769/hardcore-brood" title="Hardcore Brood" target="_blank" style="color: #cccccc; text-decoration: none;">Hardcore Brood</a></div>'},
+    link:"https://soundcloud.com/user-432649769",
+    linkType:"external",
+    image:"",
+    Type:"Sound"
+},
+{
+    id:"MusicPerformance",
+    title: "Muzikale optredens",
+    description: "Naast het opnemen en creëren van muziek, treed ik af en toe ook op.",
+    image:"",
+    Type:"Sound",
+    socials: {
+        type: "instagram", url: "https://www.instagram.com/julemaaktmuziek/"
+    }
+},
+{
+    id:"ComingSoon",
+    title: "Mijn volgend project",
+    description: "Voor mijn aanstaande project zal ik een website ontwikkelen om de kunstwerken van mijn moeder te presenteren. Deze website zal dienen als een portfolio waarin haar diverse creaties worden tentoongesteld.",
+    image:"",
+    Type:"Software",
+}
+
+
+]
+
+
 
 export default function ProjectPage() {
 
     return (
+
+
         <div className="ProfilePage">
-            <div className="Project" id="MCEVERGEM">
+            <div class="InleidingBox">
+                <div class="Inleiding">
+                    <p>Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder 
+                    vind u een overzicht van mijn projecten. 
+                    </p>
+                </div>
+                <div class="Dropdownmenu">
+                    <Dropdown menu={{ items }}>
+                        <a onClick={e => e.preventDefault()}>
+                        <Space>
+                            Project kind
+                            <DownOutlined />
+                        </Space>
+                        </a>
+                    </Dropdown>
+                </div>
+                
+            </div>
+
+            <div>
+                {projects.map((project,index) => 
+                    (
+                        <div 
+                            key={project.id} 
+                            className={`Project`} 
+                            id={project.id}
+                            >
+                            <div className="Beschrijving" id={`${project.id}Beschrijving`}>
+                                <div className="BeschrijvingInhoud">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+
+                                {project.linkType === "internal" ? (
+                                    <NavLink to={project.link} className="nav_link" activeClassName="nav_link--active">
+                                    <button className="App-button">Lees meer</button>
+                                    </NavLink>
+                                ) : (
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <button className="App-button">Bezoek de website</button>
+                                    </a>
+                                )}
+                                </div>
+                            </div>
+
+                        <div className="EmbeddedProject" id={`${project.id}API`}>
+                            <div className="API" dangerouslySetInnerHTML={project.ImageEmbedLinkFrame} ></div>
+                        </div>
+                    {project.socials && project.socials.length > 0 && (
+                            <div className='ProjectSocials'>
+                                {project.socials.map((social, i) => (
+                                    <a 
+                                        key={i} 
+                                        href={social.url} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className={`social-link social-${social.type}`}
+                                    >
+                                        {socialIcons[social.type] || social.type}
+                                    </a>
+                                ))}
+                        </div>)}
+                        
+                        </div>
+                    ))
+                } 
+            </div>
+           
+            {/* <div className="Project" id="MCEVERGEM">
                 <div className="Beschrijving" id="MCEBeschrijving" >
                     <div className="BeschrijvingInhoud">
                         <h3>MCE Evergem - Service Rapport App</h3>
@@ -18,7 +181,7 @@ export default function ProjectPage() {
                     </div>
                 </div>
                 <div className="EmbeddedProject" id="MCEAPI">
-                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> *
                 </div>
             </div>
             <div className="Project" id="HLG">
@@ -30,7 +193,7 @@ export default function ProjectPage() {
                     </div>
                 </div>
                 <div className="EmbeddedProject" id="HLGAPI">
-                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
                 </div>
             </div>
             <div className="Project" id="Podcast">
@@ -78,7 +241,8 @@ export default function ProjectPage() {
                 <div className="EmbeddedProject" id="NextProjectAPI">
                     <p>Komt eraan...</p>
                 </div>
-            </div>
+            </div> */}
+            
         </div>
     );
 }
