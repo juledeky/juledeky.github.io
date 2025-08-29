@@ -7,34 +7,6 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Descriptions, Dropdown, Space } from 'antd';
 import { TwitterOutlined, LinkedinOutlined, FacebookOutlined } from "@ant-design/icons";
 
-const items = [
-  {key: '1', label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        Software projects
-      </a>
-    ), },
-  {key: '2', label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-        Sound Projects
-      </a>
-    ), icon: <SmileOutlined />,
-  },
-  {key: '0',label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-        Delete selection
-      </a>
-    ),
-  }
-];
-
-
-
-const socialIcons = {
-  twitter: <TwitterOutlined />,
-  linkedin: <LinkedinOutlined />,
-  facebook: <FacebookOutlined />
-};
-
 const projects = [{
     id:"MCE",
     title: "MCE Evergem - Service Rapport App",
@@ -97,21 +69,47 @@ const projects = [{
 ]
 
 
+const items = [
+    {key: 'all', label: "All projects"},
+    ...[...new Set(projects.map((p) => p.Type))].map((t) => ({key: t, label:`${t} Projects`}))
+];
+
+
+
+const socialIcons = {
+  twitter: <TwitterOutlined />,
+  linkedin: <LinkedinOutlined />,
+  facebook: <FacebookOutlined />
+};
+
+
+
 
 export default function ProjectPage() {
+
+     const [filter, setFilter] = useState(null);
+
+    const handleMenuClick = ({ key }) => {
+        console.log("clicked key:", key);
+        setFilter(key === "all" ? null : key);
+    };
+
+    const filteredProjects = filter
+        ? projects.filter((p) => p.Type === filter)
+        : projects;
 
     return (
 
 
         <div className="ProfilePage">
-            <div class="InleidingBox">
-                <div class="Inleiding">
+            <div className="InleidingBox">
+                <div className="Inleiding">
                     <p>Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder 
                     vind u een overzicht van mijn projecten. 
                     </p>
                 </div>
-                <div class="Dropdownmenu">
-                    <Dropdown menu={{ items }}>
+                <div className="Dropdownmenu">
+                    <Dropdown menu={{ items, onClick: handleMenuClick }}>
                         <a onClick={e => e.preventDefault()}>
                         <Space>
                             Project kind
@@ -124,7 +122,7 @@ export default function ProjectPage() {
             </div>
 
             <div>
-                {projects.map((project,index) => 
+                {filteredProjects.map((project,index) => 
                     (
                         <div 
                             key={project.id} 
@@ -151,20 +149,20 @@ export default function ProjectPage() {
                         <div className="EmbeddedProject" id={`${project.id}API`}>
                             <div className="API" dangerouslySetInnerHTML={project.ImageEmbedLinkFrame} ></div>
                         </div>
-                    {project.socials && project.socials.length > 0 && (
-                            <div className='ProjectSocials'>
-                                {project.socials.map((social, i) => (
-                                    <a 
-                                        key={i} 
-                                        href={social.url} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className={`social-link social-${social.type}`}
-                                    >
-                                        {socialIcons[social.type] || social.type}
-                                    </a>
-                                ))}
-                        </div>)}
+                        {project.socials && project.socials.length > 0 && (
+                                <div className='ProjectSocials'>
+                                    {project.socials.map((social, i) => (
+                                        <a 
+                                            key={i} 
+                                            href={social.url} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className={`social-link social-${social.type}`}
+                                        >
+                                            {socialIcons[social.type] || social.type}
+                                        </a>
+                                    ))}
+                            </div>)}
                         
                         </div>
                     ))

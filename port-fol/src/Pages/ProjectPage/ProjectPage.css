@@ -146,6 +146,12 @@ iframe{
     padding:20px;
 }
 
+.ProjectSocials{
+    height:50px;
+    width:50px;
+    background-color: red;
+}
+
 p {
     font-size: calc(10px + 0.5vmin);
     text-align: justify;
