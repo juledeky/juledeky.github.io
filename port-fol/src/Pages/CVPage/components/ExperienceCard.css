@@ -1,0 +1,9 @@
+.ExperienceCard{
+    border: black;
+    border-style: dashed;
+    margin: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    color:black;
+    width: 30%;
+}

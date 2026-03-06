@@ -5,8 +5,8 @@
 }
 
 .Title{
-    background-color: #F2F2F0;
-    color: #735646;
+    background-color: white;
+    color: black;
 }
 .Title h1{
     font-weight: bold;
@@ -14,13 +14,14 @@
 
 .ProjectLinks{
     padding: 1%;
-    background-color: #735646;
-    border-bottom: 1px solid #735646;
+    background-color: black;
+    border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 .ProjectLinks .fa {
   font-size: 30px;
   width: 50px;
@@ -36,16 +37,28 @@
 }
 
 .ProjectLinks .IconBg{
-    background-color:#F2F2F0;
+    background-color:white;
     border-radius: 50%;
     padding: 5px;
     display: flex;
      justify-content: center;
 }
+.ProjectLinks .IconGh{
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
 
 .ProjectLinks .fa:hover {
   opacity: 0.7;
 }
+
+.ProjectLinks div{
+    margin-left: 15px;
+}
+
 
 .Container{
     margin-inline: 10%;
@@ -107,18 +120,19 @@ p {
 }
 
 h3{
-    color:#735646;
+    color:black;
 }
 
 img{
-    border: 1px solid #735646;
+    border: 1px solid black;
 }
 
 .fa {
     font-size: 30px;
-    width: 50px;
     text-align: center;
     text-decoration: none;
+    border-color:white;
+    border-radius: 25%;
 }
 
 .fa:hover {
@@ -127,7 +141,7 @@ img{
 
 
 .UitbreidingFlowchart{
-    background-color: #F2F2F0;
+    background-color: white;
 }
 
 .Uitbreiding img{
@@ -166,7 +180,7 @@ img{
     margin-right: 0;
     height:350px;
     margin-top: 5%;
-    border: 5px solid #000000;
+    border: 5px solid black;
 }
 
 #Uitleg {

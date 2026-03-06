@@ -3,12 +3,125 @@ import Navigation from '../../Routes'
 import {BrowserRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
+import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+import { Descriptions, Dropdown, Space } from 'antd';
+import { TwitterOutlined, LinkedinOutlined, FacebookOutlined } from "@ant-design/icons";
+import { projects } from '../../Models/Project';
+
+
+
+
+const socialIcons = {
+  twitter: <TwitterOutlined />,
+  linkedin: <LinkedinOutlined />,
+  facebook: <FacebookOutlined />
+};
+
+
+
 
 export default function ProjectPage() {
 
+    console.log(projects)
+    const [filter, setFilter] = useState(null);
+
+    const types = [...new Set(projects.map(p => p.Type))]
+    console.log(types);
+    const items = [
+        
+        {key: 'all', label: "All projects"},
+        ...types.map(t => ({key: t, label:`${t} Projects`})),
+        console.log(types)
+        
+    ];
+
+
+    const handleMenuClick = ({ key }) => {
+        console.log("clicked key:", key);
+        setFilter(key === "all" ? null : key);
+    };
+
+    const filteredProjects = filter
+        ? projects.filter((p) => p.Type === filter)
+        : projects;
+
+    console.log(types);
+
     return (
+
+
         <div className="ProfilePage">
-            <div className="Project" id="MCEVERGEM">
+            <div className="InleidingBox">
+                <div className="Inleiding">
+                    <p>Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder 
+                    vind u een overzicht van mijn projecten. 
+                    </p>
+                </div>
+                <div className="Dropdownmenu">
+                    <Dropdown menu={{ items, onClick: handleMenuClick }}>
+                        <a onClick={e => e.preventDefault()}>
+                        <Space>
+                            Project kind
+                            <DownOutlined />
+                        </Space>
+                        </a>
+                    </Dropdown>
+                </div>
+                
+            </div>
+
+            <div>
+                {filteredProjects.map((project,index) => 
+                    (
+                        <div 
+                            key={project.id} 
+                            className={`Project`} 
+                            id={project.id}
+                            >
+                            <div className="Beschrijving" id={`${project.id}Beschrijving`}>
+                                <div className="BeschrijvingInhoud">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                {project.link !== "" && (project.linkType === "internal" ? (
+                                    <NavLink to={project.link} className="nav_link" activeClassName="nav_link--active">
+                                    <button className="App-button">Lees meer</button>
+                                    </NavLink>
+                                ) : (
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <button className="App-button">Bezoek de website</button>
+                                    </a>
+                                )
+                            )}
+                                </div>
+                            </div>
+
+                        <div className="EmbeddedProject" id={`${project.id}API`}>
+                            <div className="API" {...(project.ImageEmbedLinkFrame && typeof project.ImageEmbedLinkFrame.__html === "string"
+                                ? { dangerouslySetInnerHTML: project.ImageEmbedLinkFrame }
+                                : {})} >
+                            </div>   
+                        </div>
+                        {project.socials && project.socials.length > 0 && (
+                                <div className='ProjectSocials'>
+                                    {project.socials.map((social, i) => (
+                                        <a 
+                                            key={i} 
+                                            href={social.url} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className={`social-link social-${social.type}`}
+                                        >
+                                            {socialIcons[social.type] || social.type}
+                                        </a>
+                                    ))}
+                            </div>)}
+                        
+                        </div>
+                    ))
+                } 
+            </div>
+           
+            {/* <div className="Project" id="MCEVERGEM">
                 <div className="Beschrijving" id="MCEBeschrijving" >
                     <div className="BeschrijvingInhoud">
                         <h3>MCE Evergem - Service Rapport App</h3>
@@ -18,7 +131,7 @@ export default function ProjectPage() {
                     </div>
                 </div>
                 <div className="EmbeddedProject" id="MCEAPI">
-                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> *
                 </div>
             </div>
             <div className="Project" id="HLG">
@@ -30,7 +143,7 @@ export default function ProjectPage() {
                     </div>
                 </div>
                 <div className="EmbeddedProject" id="HLGAPI">
-                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
+                    {/* <iframe className="SpotifyAPI" height="80px" src="https://open.spotify.com/embed/episode/3n6axKJ7O94Q5WUH5D80x7?utm_source=generator&amp;theme=0" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
                 </div>
             </div>
             <div className="Project" id="Podcast">
@@ -78,7 +191,8 @@ export default function ProjectPage() {
                 <div className="EmbeddedProject" id="NextProjectAPI">
                     <p>Komt eraan...</p>
                 </div>
-            </div>
+            </div> */}
+            
         </div>
     );
 }

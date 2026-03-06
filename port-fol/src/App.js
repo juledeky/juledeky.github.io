@@ -6,7 +6,7 @@ import ContactPage from './Pages/ContactPage/ContactPage'
 import CVPage from './Pages/CVPage/CVPage'
 import MailLogo from './Resources/img/Mail.png'
 import LinkedinLogo from './Resources/img/LinkedinLogo.png'
-import {BrowserRouter, NavLink} from 'react-router-dom'
+import {HashRouter, NavLink} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
 import {Routes} from 'react-router-dom'
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-      <BrowserRouter>
+      <HashRouter>
         <header className="App-header">
           <Navigation />
         </header>
@@ -33,7 +33,7 @@ function App() {
             </Routes>
           </div>
           <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
