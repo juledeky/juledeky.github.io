@@ -1,3 +1,12 @@
+/*
+Colors:
+#172601
+#485908
+#728C11
+#CC76C7
+#FAD9FD
+*/
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -24,7 +33,7 @@ h4{
 
 
 .App-header {
-  background-color: #735646;
+  background-color: black;
   min-height: 5vh;
   display: flex;
   flex-direction: column;
@@ -32,11 +41,11 @@ h4{
   justify-content: start;
   font-size: calc(10px + 2vmin);
   font-weight: lighter;
-  color: #BFBEAA;
+  color: grey;
 }
 
 .App-nav {
-  background-color: #735646;
+  background-color: black;
   min-height: 5vh;
   display: flex;
   flex-direction: row;
@@ -44,27 +53,26 @@ h4{
   justify-content: space-between;
   width: 90%;
   font-size: calc(10px + 1vmin);
-  color: #BFBEAA;
+  color: white;
 }
 
 .App-button-header {
   margin-inline: 2vh;
   min-height: 2vh;
   padding: 1vh;
-  border-radius: 0.1vh;
+  border-radius: 0.3vh;
   border-width: 0.1vh;
   border-style: none;
   font-size: calc(10px + 1vmin);
-  color: #BFBEAA;
-  background-color: #735646;
-  border-color: #BFBEAA;
+  color: white;
+  background-color: black;
 }
 
 .App-button-header:hover{
   
-  color: #735646;
-  background-color: #BFBEAA;
-  border-color: #735646;
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 .App-button{
@@ -76,23 +84,23 @@ h4{
   border-style: none;
   font-size: calc(10px + 0.5vmin);
   color: white;
-  background-color: #735646;
-  border-color: #BFBEAA;
+  background-color: black;
+  border-color: darkgray;
   border-radius: 5%;
 }
 
 .App-button:hover{
-  color: #735646;
+  color: black;
   background-color: white;
   /* border-color: #735646;
   border-width:0.2vh; */
-  border: 0.2vh, solid, #735646
+  border: 0.2vh, solid, black
 }
 
 .nav_link--active{
-  color: #161616;
+  color: black;
   background-color: #F2F2F0;
-  border-color: #161616;
+  border-color: black;
   text-decoration: none;
 }
 
@@ -106,17 +114,17 @@ h4{
 }
 
 .App-link {
-  color: #61dafb;
+  color: blue;
 }
 
 .App-footer{
-  background-color: #0D0D0D;
+  background-color: black;
   min-height: 12vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #F2F2F0;
+  color: white;
   margin-bottom: 0;
 }
 
@@ -126,11 +134,11 @@ h4{
 
 .Footer-content p{
   font-size: xx-small;
-  color:#BFBEAA;
+  color:white;
 }
 
 .Footer-Img{
-  color:#F2F2F0;
+  color:white;
   height: 5vmin;
   margin-inline: 2vmin;
 }
@@ -140,7 +148,7 @@ h4{
   width: 50px;
   text-align: center;
   text-decoration: none;
-  color:#BFBEAA;
+  color:white;
 }
 
 .fa:hover {
@@ -172,7 +180,7 @@ h4{
 .App-nav .NavigationMenu span{
   height: 0.2rem;
   width: 100%;
-  background-color: #BFBEAA;
+  background-color: white;
   border-radius: 0.5rem;
 }
 

@@ -1,5 +1,5 @@
 .CVPage {
-    background-color: #F2F2F0;
+    background-color: white;
     min-height: 12vh;
     display: flex;
     flex-direction: column;
@@ -27,3 +27,31 @@
 object{
     margin:0px;
 }
+
+.ErvaringenLijst{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.OpleidingenLijst{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.VrijwilligerswerkLijst{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+

@@ -6,6 +6,7 @@ import SRAWord from '../../Resources/img/SRA-Word.png'
 import FCMCEBefore from '../../Resources/img/FlowchartMCEBefore.png'
 import FCMCEAfter from '../../Resources/img/FlowchartMCEAfter.png'
 import VSIcon from '../../Resources/Icons/Visual_Studio_Icon_2022.svg'
+import GithubIcon from '../../Resources/Icons/GitHub_Invertocat_Black.svg'
 
 export default function MCEvergemPage() {
 
@@ -15,7 +16,7 @@ export default function MCEvergemPage() {
             <h1>SERVICE RAPPORT APP - MCE EVERGEM</h1>
         </div>
         <div class='ProjectLinks'>
-             <a href="https://github.com/JULDEK/ServiceRapportApp" class="fa fa-github" alt="Logo of github"></a>
+             <div><a className='IconGh' href="https://github.com/JULDEK/ServiceRapportApp" alt="Logo of github"><img src={GithubIcon} ></img></a></div>
              <div className='IconBg'><img src={VSIcon} ></img></div>
         </div>
 
