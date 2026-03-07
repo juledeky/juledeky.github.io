@@ -21,7 +21,7 @@ export const experiences = [
         id:"HLG",
         type: "work",
         company: "Hubert Lampo Genootschap",
-        workTitle: "Student Wordpress Developer",
+        workTitle: "Student Developer",
         description: "",
         skills: [, "Business Analysis", "Social Skills", "Client skills", "Teamwork"],
         techs: ["Wordpress"],
@@ -34,7 +34,7 @@ export const experiences = [
         company: "Universiteit Antwerpen",
         workTitle: "Stagiair Team Diversiteit en Inclusie",
         description: "",
-        skills: ["Canva", "Teamwork", "Schrijven", "Beleid", "Kwalitatieve Onderzoeksmethoden"],
+        skills: ["Canva", "Teamwork", "Schrijven", "Beleid", "Onderzoek"],
         techs: ["Canva"],
         startDate: new Date(2024, 9),
         endDate: new Date(2025, 0)
@@ -112,6 +112,7 @@ export const experiences = [
         workTitle: "Sfeerbeheerder",
         description: "",
         skills: ["Conflict"],
+        techs:[],
         startDate: new Date(2025, 4),
         endDate: new Date(2025, 8)
     }),
@@ -122,6 +123,7 @@ export const experiences = [
         workTitle: "Vorming Genderdiversiteit",
         description: "",
         skills: [],
+        techs:[],
         startDate: new Date(2023, 0),
         endDate: new Date(2023, 0)
     }),
@@ -132,6 +134,7 @@ export const experiences = [
         workTitle: "Bachelor in Toegepaste Informatica",
         description: "",
         skills: [],
+        techs:[],
         startDate: new Date(2018, 8),
         endDate: new Date(2023, 1)
     }),
@@ -142,6 +145,7 @@ export const experiences = [
         workTitle: "Master in Gender en Diversiteit",
         description: "",
         skills: [],
+        techs: [],
         startDate: new Date(2018, 8),
         endDate: new Date(2023, 1)
     })

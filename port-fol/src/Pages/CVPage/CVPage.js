@@ -28,8 +28,8 @@ export default function CVPage() {
       <div className="Ervaring">
         <h2>Ervaring</h2>
 
-        <div className="ErvaringenLijst">
-
+        <div className="Lijst">
+        
           {workExperiences.map((exp, index) => (
               <ExperienceCard key={exp.id} experience={exp} />
             )
@@ -41,7 +41,7 @@ export default function CVPage() {
 
       <div className="Opleidingen">
         <h3>Opleidingen</h3>
-        <div className="OpleidingenLijst">
+        <div className="Lijst">
           {schoolExperiences.map((exp, index) => (
             <ExperienceCard key={exp.id} experience={exp} />
           ))}
@@ -50,7 +50,7 @@ export default function CVPage() {
 
       <div className="Vrijwilligerswerk">
         <h3>Vrijwilligerswerk</h3>
-        <div className="VrijwilligerswerkLijst">
+        <div className="Lijst">
           {volunteeringExperiences.map((exp, index) => (
             <ExperienceCard key={exp.id} experience={exp} />
           ))}

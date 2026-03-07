@@ -1,9 +1,99 @@
 .ExperienceCard{
-    border: black;
-    border-style: dashed;
+    border: grey;
+    border-style: solid;
+    border-radius: 5%;
     margin: 5px;
-    padding: 5px;
+    padding: 15px;
     background-color: whitesmoke;
     color:black;
-    width: 30%;
+    max-width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+.HeadOfCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Titles{
+    display: flex;
+    flex-direction: column;
+}
+
+.ExperienceCompany{
+    margin: 2px;
+}
+
+.ExperienceWorkTitle{
+    margin: 2px;
+}
+
+.Dates{
+    display: flex;
+    align-items: flex-start;
+    margin:0px;
+}
+
+.ExperienceDate{
+    font-size: 12px;
+    color: #888;
+    font-weight: 400;
+    white-space: nowrap;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left:0px;
+    margin:0px;
+}
+
+li{
+    font-size: 12px;
+    color: #444;
+    line-height: 1.65;
+    padding-left: 2px;
+    position: relative;
+    font-weight: 400;
+    background:white;
+    border: 1px solid currentColor;
+    border-style: solid;
+    margin:2px;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-width: 1px;
+    border-radius: 10%;
+}
+
+.ExperienceSkills li{
+    background-color: #dbeafe; /* light blue */
+    color: #1e40af;
+}
+
+.ExperienceTechs li{
+    background-color: #dcfce7; /* light green */
+    color: #166534;
+}
+
+
+.Titles{
+    text-align: left;
+}
+
+.Titles .ExperienceCompany{
+    font-size: 14px;
+}
+.Titles .ExperienceWorkTitle{
+    font-size: 15px;
+    
+    font-weight: bold;
+}
+
+
