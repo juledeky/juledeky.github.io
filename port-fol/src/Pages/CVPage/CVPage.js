@@ -2,6 +2,7 @@ import './CVPage.css';
 import CV from '../../Resources/CV-2024.pdf'
 import { experiences } from '../../Models/Experience'
 import ExperienceCard from "./components/ExperienceCard";
+import { motion, LayoutGroup } from "framer-motion";
 
 export default function CVPage() {
   
@@ -13,50 +14,54 @@ export default function CVPage() {
 
    return (
     <div className="CVPage">
+      <div className="Page">
+        <div className="Kop">
+          <h1>JULE DEKYVERE</h1>
+          <h2>Software Developer</h2>
+        </div>
+        <div className="Information"> 
+          <p>Woonplaats: Gent 9000, België</p>
+          <p>Email: juledekyvere@protonmail.com</p>
+          <p>Gsm-nummer: op aanvraag</p>
+          <p>Geboortedatum: 12/10/2000</p>
+        </div>
 
-      <div className="Kop">
-        <h1>JULE DEKYVERE</h1>
-        <h2>Software Developer</h2>
-      </div>
-      <div className="Information"> 
-        <p>Woonplaats: Gent 9000, België</p>
-        <p>Email: juledekyvere@protonmail.com</p>
-        <p>Gsm-nummer: op aanvraag</p>
-        <p>Geboortedatum: 12/10/2000</p>
-      </div>
+        <div className="Ervaring">
+          <h2>Ervaring</h2>
 
-      <div className="Ervaring">
-        <h2>Ervaring</h2>
+          <div className="Lijst">
+            <LayoutGroup>
+              {workExperiences.map((exp, index) => (
+                    <ExperienceCard key={exp.id} experience={exp} />
+                )
+              )}
+            </LayoutGroup>
 
-        <div className="Lijst">
-        
-          {workExperiences.map((exp, index) => (
-              <ExperienceCard key={exp.id} experience={exp} />
-            )
-          )}
+          </div>
+        </div>
 
+        <div className="Opleidingen">
+          <h3>Opleidingen</h3>
+          <div className="Lijst">
+            <LayoutGroup>
+            {schoolExperiences.map((exp, index) => (
+                <ExperienceCard key={exp.id} experience={exp} />
+            ))}
+            </LayoutGroup>
+          </div>
+        </div>
 
+        <div className="Vrijwilligerswerk">
+          <h3>Vrijwilligerswerk</h3>
+          <div className="Lijst">
+            <LayoutGroup>
+            {volunteeringExperiences.map((exp, index) => (
+                <ExperienceCard key={exp.id} experience={exp} />
+            ))}
+            </LayoutGroup>
+          </div>
         </div>
       </div>
-
-      <div className="Opleidingen">
-        <h3>Opleidingen</h3>
-        <div className="Lijst">
-          {schoolExperiences.map((exp, index) => (
-            <ExperienceCard key={exp.id} experience={exp} />
-          ))}
-        </div>
-      </div>
-
-      <div className="Vrijwilligerswerk">
-        <h3>Vrijwilligerswerk</h3>
-        <div className="Lijst">
-          {volunteeringExperiences.map((exp, index) => (
-            <ExperienceCard key={exp.id} experience={exp} />
-          ))}
-        </div>
-      </div>
-      
     </div>
    );
 }
