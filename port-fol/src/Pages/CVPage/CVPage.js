@@ -1,8 +1,9 @@
 import './CVPage.css';
 import CV from '../../Resources/CV-2024.pdf'
 import { experiences } from '../../Models/Experience'
-import ExperienceCard from "./components/ExperienceCard";
+import ExperienceCard from "./components/ExperienceCard/ExperienceCard";
 import { motion, LayoutGroup } from "framer-motion";
+import BusinessCard from './components/BusinessCard/BusinessCard';
 
 export default function CVPage() {
   
@@ -15,17 +16,16 @@ export default function CVPage() {
    return (
     <div className="CVPage">
       <div className="Page">
+
         <div className="Kop">
-          <h1>JULE DEKYVERE</h1>
-          <h2>Software Developer</h2>
         </div>
-        <div className="Information"> 
+        {/* <div className="Information"> 
           <p>Woonplaats: Gent 9000, België</p>
           <p>Email: juledekyvere@protonmail.com</p>
           <p>Gsm-nummer: op aanvraag</p>
           <p>Geboortedatum: 12/10/2000</p>
-        </div>
-
+        </div> */}
+        <BusinessCard></BusinessCard>
         <div className="Ervaring">
           <h2>Ervaring</h2>
 

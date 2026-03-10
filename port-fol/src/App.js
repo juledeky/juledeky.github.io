@@ -11,10 +11,13 @@ import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
 import {Routes} from 'react-router-dom'
 import MCEVERGEMPage from './Pages/MCEVERGEMPage/MCEVERGEMPage'
+import { ConfigProvider, theme } from 'antd';
+
 
 
 function App() {
   return (
+    <ConfigProvider theme={{ algorithm: [theme.darkAlgorithm, theme.compactAlgorithm]}}>
     <div className="App">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <HashRouter>
@@ -35,6 +38,7 @@ function App() {
           <Footer />
       </HashRouter>
     </div>
+    </ConfigProvider>
   );
 }
 
@@ -44,7 +48,7 @@ function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="App-nav">
-      <h4 className="Nav-titel">Jule Dekyvere</h4>
+      <h1 className="Nav-titel">Jule Dekyvere</h1>
       <div className="NavigationMenu" onClick={() => {setMenuOpen(!menuOpen)}}>
         <div class="fa fa-navicon" alt="Navigation menu"></div>
       </div>

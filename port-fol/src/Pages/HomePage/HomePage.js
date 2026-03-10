@@ -1,6 +1,7 @@
 import './HomePage.css';
 import ProfilePic from '../../Resources/img/SelfPortrait2.jpg'
 
+import {NavLink} from 'react-router-dom';
 
 
 export function Introduction() {
@@ -16,6 +17,18 @@ export function Introduction() {
                     te bewerkstelligen. Mijn streven is om innovatieve software te ontwikkelen die 
                     niet alleen technologische vooruitgang vertegenwoordigt, maar ook bijdraagt aan 
                     een meer diverse en inclusieve samenleving. (Bedankt ChatGPT) </p>
+            </div>
+            <div className="homeButtons">
+                <NavLink to={"/Projects"} className="nav_link" activeClassName="nav_link--active">
+                    <button className='homePageBtn'> Mijn projecten </button>
+                </NavLink>
+                <NavLink to={"/CurriculumVitae"} className="nav_link" activeClassName="nav_link--active">
+                    <button className='homePageBtn'> Mijn CV </button>
+                </NavLink>
+                <NavLink to={"/Contact"} className="nav_link" activeClassName="nav_link--active">
+                    <button className='homePageBtn'> Contacteer mij </button>
+                </NavLink>
+                
             </div>
         </div>
     );
@@ -39,10 +52,10 @@ export default function HomePage() {
             <div className="container">
                 <div class="black-block">
                     <div class="firstHalve">
-                        <Profile />
+                        <Introduction />
                     </div>
                     <div class="secondHalve">
-                        <Introduction />
+                        <Profile />
                     </div>
                 </div>
             </div>

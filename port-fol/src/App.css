@@ -172,6 +172,13 @@ h4{
 }
 
 /*----------------*/
+.App-nav{
+  min-height:125px;
+}
+.App-nav h1{
+  font-size: 38px;
+  font-weight: bold;
+}
 
 .App-nav .NavigationMenu{
   display: none;

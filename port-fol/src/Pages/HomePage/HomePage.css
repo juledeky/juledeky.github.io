@@ -88,6 +88,30 @@ html, body {
     width:50%;
 }
 
+.homeButtons{
+    margin-top: 50px;
+}
+
+.homePageBtn{
+     background-color: black;
+    color: white;
+    border: solid white 0.5px;
+    padding: 8px;
+    width: 150px;
+    border:none;
+    align-self: center;
+    margin-inline: 10px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.homePageBtn:hover{
+    color: black;
+    background-color: white;
+    border: solid black 0.5px;
+    padding: 8px;
+}
+
 @media only screen and (max-width: 600) {
     
 }
