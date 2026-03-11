@@ -114,11 +114,11 @@ h4{
   border: 0.2vh, solid, var(--color-secondary)
 }
 
-.nav_link--active .App-button{
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  border-color: var(--color-secondary);
-  text-decoration: none;
+.nav_link--active .App-button-header{
+  color: var(--color-primary) !important;
+  background-color: var(--color-secondary) !important;
+  border-color: var(--color-primary) !important;
+  text-decoration: none !important;
 }
 
 .nav_link{
@@ -127,9 +127,9 @@ h4{
 }
 
 .App-button-header:has(.nav_link--active) {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  border-color: var(--color-secondary);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-color: var(--color-primary);
 }
 
 .nav_link:hover{
@@ -266,6 +266,12 @@ h4{
 }
 
 @media only screen and (max-width: 770px) {
+  .App-header{
+    position: sticky;
+    top: 0;
+    z-index: 200; /* make sure it stays above other content */
+  }
+
   .App-nav{
     min-height: 60px;
     padding: 0 16px;
@@ -273,6 +279,36 @@ h4{
     align-items: center;
     flex-wrap: nowrap; /* ← prevent wrapping, title stays put */
     position: relative;
+  }
+
+  .App-nav .App-buttons .nav_link{
+    display: block;
+    width: 100%;
+    height:auto;
+  }
+
+   .App-nav .App-buttons .nav_link--active{
+    display: block;
+    width: 100%;
+    height:auto;
+    
+  }
+
+   /* default (non-active) button — black background, white text */
+  .App-nav .App-buttons .App-button-header {
+    background-color: var(--color-secondary); /* black */
+    color: var(--color-primary); /* white */
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* active button — white background, black text */
+  .App-nav .App-buttons .nav_link--active .App-button-header {
+    background-color: var(--color-primary) !important; /* white */
+    color: var(--color-secondary) !important; /* black */
+    border-left: 3px solid var(--color-accent);
   }
 
   .App-nav h1 {
@@ -320,17 +356,21 @@ h4{
       margin: 0.2rem 0.5rem;
   }
 
-  .App-button-header{
-      width: 100%;
-      text-align: center;
-      margin: 0;
-      border-bottom: 1px solid (var(--color-secondary));
-  }
+
 
   .Footer-content {
     margin-inline: 20px;
   }
   
+  .App-navbtns{
+    width:100%;
+  }
+  .lang-switcher{
+    display: flex;
+    flex-direction: row;
+    margin-right:0;
+    margin-block: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -66,7 +66,7 @@ function Navigation() {
         <div className="fa fa-navicon" alt="Navigation menu"></div>
       </div>
       <div className="App-buttons" id={menuOpen ? "open" : ""}>
-        <div >
+        <div className="App-navbtns">
           <NavLink className={({ isActive }) => isActive ? "nav_link nav_link--active" : "nav_link"} to="/Home" onClick={() => setMenuOpen(false)}>
             <button className="App-button-header" >
               {t("nav_home")}
