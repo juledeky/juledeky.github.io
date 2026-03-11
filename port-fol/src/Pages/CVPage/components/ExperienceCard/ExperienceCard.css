@@ -1,10 +1,10 @@
 .ExperienceCard{
-    border: white;
+    border: var(--color-primary);
     border-style: solid;
     border-radius: 15px;
     padding: 15px;
-    background-color: white;
-    color:black;
+    background-color: var(--color-primary);
+    color:var(--color-secondary);
     /*width: 100%; /* fixed 50% width regardless of how many cards */
     /*max-width: 500px;*/
     padding-top: 20px;
@@ -97,7 +97,7 @@ li{
     padding-left: 2px;
     position: relative;
     font-weight: 400;
-    background:white;
+    background:var(--color-primary);
     border: 1px solid currentColor;
     border-style: solid;
     margin:2px;
@@ -149,9 +149,9 @@ li{
 }
 
 .ExperienceBtn{
-    background-color: black;
-    color: white;
-    border: solid white 0.5px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: solid var(--color-primary) 0.5px;
     padding: 8px;
     width: 100px;
     border:none;
@@ -162,23 +162,23 @@ li{
 }
 
 .ExperienceBtn:hover{
-    color: black;
-    background-color: white;
-    border: solid black 0.5px;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: solid var(--color-secondary) 0.5px;
     padding: 8px;
 }
 
 .ExperienceCard.expanded .ExperienceBtn{
-    color: black;
-    background-color: white;
-    border: solid black 0.5px;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: solid var(--color-secondary) 0.5px;
     padding: 8px;
 }
 
 .ExperienceCard.expanded .ExperienceBtn:hover{
-    color: white;
-    background-color: black;
-    border: solid black 0.5px;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: solid var(--color-secondary) 0.5px;
     padding: 8px;
 }
 

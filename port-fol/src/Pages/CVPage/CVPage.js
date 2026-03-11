@@ -4,9 +4,12 @@ import { experiences } from '../../Models/Experience'
 import ExperienceCard from "./components/ExperienceCard/ExperienceCard";
 import { motion, LayoutGroup } from "framer-motion";
 import BusinessCard from './components/BusinessCard/BusinessCard';
+import { useTranslation } from 'react-i18next';
 
 export default function CVPage() {
   
+  const {t} = useTranslation();
+
   console.log(experiences)
   const workExperiences = experiences.filter((e) => e.type === "work");
   console.log(workExperiences);
@@ -16,18 +19,11 @@ export default function CVPage() {
    return (
     <div className="CVPage">
       <div className="Page">
-
         <div className="Kop">
-        </div>
-        {/* <div className="Information"> 
-          <p>Woonplaats: Gent 9000, België</p>
-          <p>Email: juledekyvere@protonmail.com</p>
-          <p>Gsm-nummer: op aanvraag</p>
-          <p>Geboortedatum: 12/10/2000</p>
-        </div> */}
         <BusinessCard></BusinessCard>
+        </div>
         <div className="Ervaring">
-          <h2>Ervaring</h2>
+          <h2>{t("cv_experience")}</h2>
 
           <div className="Lijst">
             <LayoutGroup>
@@ -41,7 +37,7 @@ export default function CVPage() {
         </div>
 
         <div className="Opleidingen">
-          <h3>Opleidingen</h3>
+          <h3>{t("cv_education")}</h3>
           <div className="Lijst">
             <LayoutGroup>
             {schoolExperiences.map((exp, index) => (
@@ -52,7 +48,7 @@ export default function CVPage() {
         </div>
 
         <div className="Vrijwilligerswerk">
-          <h3>Vrijwilligerswerk</h3>
+          <h3>{t("cv_volunteering")}</h3>
           <div className="Lijst">
             <LayoutGroup>
             {volunteeringExperiences.map((exp, index) => (
@@ -62,6 +58,9 @@ export default function CVPage() {
           </div>
         </div>
       </div>
+      <a href="./Curriculum_Vitae_2026-Website.pdf" download="DekyvereJule_CV.pdf" className="cv-download-btn">
+        ↓ Download CV
+      </a>
     </div>
    );
 }

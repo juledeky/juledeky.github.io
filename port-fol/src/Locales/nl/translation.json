@@ -1,0 +1,94 @@
+
+{
+    "nav_home": "Home",
+    "nav_projects": "Projecten",
+    "nav_cv": "Mijn CV",
+    "nav_contact":"Contact",
+    "footer_message": "Deze webpagina maakt geen gebruik van cookies en uw data wordt niet opgeslagen en/of doorverkocht.",
+    "home_title": "Hey! Ik ben Jule",
+    "home_intro": "Als een toegewijde softwareontwikkelaar, richt ik mij op het bevorderen van gendergelijkheid en diversiteit binnen de technologische sector. Met een passie voor het creëren van inclusieve en rechtvaardige oplossingen, ben ik vastbesloten om mijn vaardigheden in te zetten om positieve verandering te bewerkstelligen. Mijn streven is om innovatieve software te ontwikkelen die niet alleen technologische vooruitgang vertegenwoordigt, maar ook bijdraagt aan een meer diverse en inclusieve samenleving. (Bedankt ChatGPT)",
+
+    "proj_title": "Projecten",
+    "proj_intro": "Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder vindt u een overzicht van mijn projecten.",
+    "proj_filter": "Filter projecten",
+
+    "read_more":"Lees meer",
+    "visit_site":"Bezoek de website",
+    "more_info":"Meer info",
+    "less_info":"Minder info",
+
+    "cv_experience":"Ervaring",
+    "cv_education":"Opleiding",
+    "cv_volunteering":"Vrijwilligerswerk",
+    "on_request":"Op aanvraag",
+    "dateofbirth":"12 Oktober 2000",
+
+
+    "companies":{
+        "hlg_name":"Hubert Lampo Genootschap",
+        "mce_name":"MCE Evergem",
+        "UA_name":"Universiteit Antwerpen",
+        "UG_name":"Universiteit Gent",
+        "HOGENT_name":"Hogeschool Gent",
+        "ZWVTD_name":"Ten Dries Jongerenzorg ZWV"
+    },
+
+    "projects":{
+
+        "mce_title":"MCE Evergem - Service Rapport App",
+        "mce_description":"Na het starten met de opleiding Gender en Diversiteit, begon ik als jobstudent te werken bij MCE om een software applicatie te bouwen om hun administratieve lasten te verlichten.",
+        
+        "hlg_description":"Op vraag van de bestuursleden van het Hubert Lampo Genootschap verfris ik langzaam hun nieuwe website via Wordpress.",
+        
+        "podcast_title":"On Wine Podcast",
+        "podcast_description":"Samen met vrienden maak ik sporadisch een aflevering van onze podcast On Wine. Wies houdt zich bezig met de inhoudelijke kant, en ik verzorg de technische aspecten. Beluister nu onze meest recente aflevering!",
+        
+        "sc_title":"Muzikale creaties",
+        "sc_description":"Een van mijn vrijetijdsbestedingen is het creëren van muziek, hoewel het niet van professionele kwaliteit is, geniet ik er toch van als vorm van ontspanning. Voel je vrij om mijn nieuwste nummer te beluisteren.",
+
+        "mp_title":"Muzikale optredens",
+        "mp_description":"Naast het opnemen en creëren van muziek, treed ik af en toe ook op.",
+
+        "nextproject_title":"Mijn volgend project",
+        "nextproject_description":"Voor mijn aanstaande project zal ik een website ontwikkelen om de kunstwerken van mijn moeder te presenteren. Deze website zal dienen als een portfolio waarin haar diverse creaties worden tentoongesteld."
+
+    },
+
+    "experiences": {
+        "HLG_workTitle": "Student Developer",
+        "HLG_description": "Herwerking en professionalisering van een bestaande WordPress-website, Verbetering van gebruiksvriendelijkheid, structuur en visuele uitstraling, Afstemming met de klant rond noden en verwachtingen, Ondersteuning en uitleg zodat de klant de website zelfstandig verder kon beheren",
+
+        "UA_workTitle": "Stagiair Team Diversiteit en Inclusie",
+        "UA_description": "Medewerking aan een onderzoeksproject rond de ervaringen van werknemers met een functiebeperking, Opstellen en afname van interviews en verwerking van kwalitatieve input, Schrijven van interne en externe teksten op maat van verschillende doelgroepen, Samenwerking met diverse SPOC's en stakeholders binnen de universiteit",
+
+        "MCE_workTitle": "Student C# Developer",
+        "MCE_description": "Ontwikkeling van een WPF-applicatie voor administratief beheer, Analyse van gebruikersnoden en vertaling naar functionele software-oplossingen, Samenwerking met opdrachtgever",
+
+        "CODIT_workTitle": "Junior C# Developer",
+        "CODIT_description": "Ontwikkeling en aanpassing van softwarecomponenten in C# binnen een consultancycontext, Werken met Azure-technologieën in een professionele ontwikkelomgeving, Kennismaking met best practices rond codekwaliteit, testing en documentatie, Samenwerking binnen een team van developers aan klantprojecten",
+
+        "CD_workTitle": "Stagiair Java Developer",
+        "CD_description": "Analyse en optimalisatie van een bestaand algoritme voor het inpakken van bordspellen, Vergelijking van performantie voor en na optimalisatie, Rapportering van bevindingen aan het ontwikkelteam",
+
+        "HOGENT_work_workTitle": "Transcribent/Onderzoeksassistent",
+        "HOGENT_work_description": "Deelname aan kwalitatieve onderzoeksprojecten, Bijwonen en transcriberen van diepte-interviews, Verwerking van vertrouwelijke onderzoeksdata",
+
+        "WAREM_workTitle": "Afwasser/Keukenhulp",
+        "WAREM_description": "Studentenjob in een drukke horecaomgeving, Efficiënt en zelfstandig werken onder tijdsdruk, Samenwerking binnen een team met aandacht voor kwaliteit en hygiëne",
+
+        "INTRA_workTitle": "Polyvalente Jobstudent",
+        "INTRA_description": "Ondersteuning van dagelijkse winkelactiviteiten; kassa en vakkenvullen, Klanten helpen en zorgen voor een verzorgde winkelomgeving, Verantwoordelijkheid opnemen tijdens piekmomenten",
+
+        "KIQUE_workTitle": "Sfeerbeheerder",
+        "KIQUE_description": "Instaan voor veiligheid, rust en inclusieve sfeer tijdens evenementen, Aanspreekpunt bij spanningen of incidenten, Samenwerking binnen een divers team",
+
+        "ZWVTD_workTitle": "Vorming Genderdiversiteit",
+        "ZWVTD_description": "Ontwikkeling en begeleiding van een workshop voor hulpverleners, Vertaling van academische kennis naar praktijk, Sensitieve en doelgroepgerichte communicatie",
+
+        "HOGENT_study_workTitle": "Bachelor in Toegepaste Informatica",
+        "HOGENT_study_description": "Masterproef: Toegankelijkheid van de digitale infrastructuur van universitaire bibliotheken in Vlaanderen voor gebruikers met een functiebeperking.",
+
+        "UGENT_workTitle": "Master in Gender en Diversiteit",
+        "UGENT_description": "Afstudeerrichting web- en mobiele applicaties, Bachelorproef: Digitale toegankelijkheid van Vlaamse mobiele (overheids)applicaties voor gebruikers met een visuele beperking."
+    }
+}

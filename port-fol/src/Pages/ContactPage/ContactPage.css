@@ -1,5 +1,5 @@
 .ContactPage {
-    background-color: #F2F2F0;
+    background-color: var(--color-primary);
     min-height: 12vh;
     display: flex;
     flex-direction: column;
@@ -7,5 +7,5 @@
     justify-content: start;
     font-size: calc(10px + 2vmin);
     font-weight: lighter;
-    color: #0D0D0D;
+    color: var(--color-secondary);
 }

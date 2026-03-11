@@ -1,0 +1,98 @@
+
+{
+    "nav_home": "Home",
+    "nav_projects": "Projects",
+    "nav_cv": "My CV",
+    "nav_contact":"Contact",
+    "footer_message":"This webpage does not use cookies and your data will not be stored and/or resold.",
+    "home_title": "Hey! I'm Jule.",
+    "home_intro": "As a dedicated software developer, I focus on promoting gender equality and diversity within the technology sector. With a passion for creating inclusive and equitable solutions, I am determined to use my skills to bring about positive change. My goal is to develop innovative software that not only represents technological progress, but also contributes to a more diverse and inclusive society. (Thank you ChatGPT)",
+
+    "proj_title": "Projects",
+    "proj_intro": "I am interested in a variety of topics, which can be divided into two recurring themes: software development and sound art. Below you will find an overview of my projects.",
+    "proj_filter": "Filter projects",
+
+    "read_more":"Read more",
+    "visit_site":"Visit the website",
+    "more_info":"More info",
+    "less_info":"Less info",
+
+    "cv_experience":"Experience",
+    "cv_education":"Education",
+    "cv_volunteering":"Volunteering",
+    "on_request":"On request",
+    "dateofbirth":"October 12th, 2000",
+
+    
+    "companies":{
+        "hlg_name":"Hubert Lampo Society",
+        "mce_name":"MCE Evergem",
+        "UA_name":"University of Antwerp",
+        "UG_name":"University of Ghent",
+        "HOGENT_name":"Ghent University College",
+        "ZWVTD_name":"Ten Dries Youth Care ZWV"
+    },
+
+    "projects":{
+        
+        "mce_title":"MCE Evergem - Service Rapport App",
+        "mce_description":"After starting the Gender and Diversity program, I began working as a student employee at MCE to build a software application to reduce their administrative workload.",
+        
+        "hlg_description":"At the request of the board members of the Hubert Lampo Society, I am slowly revamping their new website using WordPress.",
+        
+        "podcast_title":"On Wine Podcast",
+        "podcast_description":"Together with friends, I occasionally produce episodes of our podcast On Wine. Wies takes care of the content, and I handle the technical aspects. Listen to our most recent episode now!",
+        
+        "sc_title":"Musical creations",
+        "sc_description":"One of my hobbies is creating music. Although it is not of professional quality, I still enjoy it as a form of relaxation. Feel free to listen to my latest song.",
+
+        "mp_title":"Musical performances",
+        "mp_description":"In addition to recording and creating music, I also perform occasionally.",
+
+        "nextproject_title":"My next project",
+        "nextproject_description":"For my upcoming project, I will develop a website to showcase my mother's artwork. This website will serve as a portfolio displaying her various creations."
+
+    },
+
+    "experiences": {
+        "HLG_workTitle": "Student Developer",
+        "HLG_description": "Redesigning and professionalizing an existing WordPress website, Improving user-friendliness, structure and visual appearance, Aligning with the client around needs and expectations, Support and explanation so the client could manage the website independently",
+
+        "UA_workTitle": "Intern Team Diversity and Inclusion",
+        "UA_description": "Contributing to a research project on the experiences of employees with a disability, Conducting and transcribing interviews and processing qualitative input, Writing internal and external texts tailored to different target groups, Collaboration with various SPOCs and stakeholders within the university",
+
+        "MCE_workTitle": "Student C# Developer",
+        "MCE_description": "Development of a WPF application for administrative management, Analysis of user needs and translation into functional software solutions, Collaboration with the client",
+
+        "CODIT_workTitle": "Junior C# Developer",
+        "CODIT_description": "Development and modification of software components in C# within a consultancy context, Working with Azure technologies in a professional development environment, Introduction to best practices around code quality, testing and documentation, Collaboration within a team of developers on client projects",
+
+        "CD_workTitle": "Java Developer Intern",
+        "CD_description": "Analysis and optimization of an existing algorithm for packing board games, Performance comparison before and after optimization, Reporting findings to the development team",
+
+        "HOGENT_work_workTitle": "Transcriptionist/Research Assistant",
+        "HOGENT_work_description": "Participation in qualitative research projects, Attending and transcribing in-depth interviews, Processing confidential research data",
+
+        "WAREM_workTitle": "Dishwasher/Kitchen Assistant",
+        "WAREM_description": "Student job in a busy hospitality environment, Working efficiently and independently under time pressure, Collaboration within a team with attention to quality and hygiene",
+
+        "INTRA_workTitle": "Versatile Student Employee",
+        "INTRA_description": "Supporting daily store activities; cashier and stocking shelves, Helping customers and maintaining a tidy store environment, Taking responsibility during peak moments",
+
+        "KIQUE_workTitle": "Safe(r) spaces 'Angel'",
+        "KIQUE_description": "Ensuring safety, calm and an inclusive atmosphere during events, Point of contact for tensions or incidents, Collaboration within a diverse team",
+
+        "ZWVTD_workTitle": "Gender Diversity Training",
+        "ZWVTD_description": "Development and facilitation of a workshop for care workers, Translation of academic knowledge into practice, Sensitive and target-group-oriented communication",
+
+        "HOGENT_study_workTitle": "Bachelor in Applied Computer Science",
+        "HOGENT_study_description": "Thesis: Accessibility of the digital infrastructure of university libraries in Flanders for users with a disability.",
+
+        "UGENT_workTitle": "Master in Gender and Diversity",
+        "UGENT_description": "Specialisation in web and mobile applications, Bachelor's thesis: Digital accessibility of Flemish mobile (government) applications for users with a visual impairment."
+    }
+
+
+    
+
+}

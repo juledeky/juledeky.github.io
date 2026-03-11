@@ -3,7 +3,7 @@ import {BrowserRouter, NavLink} from 'react-router-dom';
 import { TwitterOutlined, LinkedinOutlined, FacebookOutlined } from "@ant-design/icons";
 import { projects } from '../../Models/Project';
 import { useState } from "react";
-
+import { useTranslation } from 'react-i18next';
 
 
 const socialIcons = {
@@ -20,6 +20,8 @@ export default function ProjectPage() {
     const [filter, setFilter] = useState(null);
     const [selected, setSelected] = useState("Project kind");
 
+
+    const { t } = useTranslation();
 
     const handleSelect = (key, label) => {
         setSelected(label);
@@ -40,19 +42,18 @@ export default function ProjectPage() {
         <div className="ProfilePage">
             <div className="InleidingBox">
                 <div className="Inleiding">
-                    <h1 className="PageTitle">Projecten</h1>
-                    <p>Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder 
-                    vind u een overzicht van mijn projecten. 
+                    <h1 className="PageTitle">{t("proj_title")}</h1>
+                    <p>{t("proj_intro")}
                     </p>
                 </div>
                 <div className="Dropdownmenu">
                     <button className="filter-toggle" onClick={() => setFilterOpen(!filterOpen)}>
-                        Filter projecten <span className={`arrow ${filterOpen ? "open" : ""}`}>▾</span>
+                        {t("proj_filter")}<span className={`arrow ${filterOpen ? "open" : ""}`}>▾</span>
                     </button>
                     <div className={`filter-tabs ${filterOpen ? "visible" : ""}`}>
                         <button className={`filter-tab ${filter === null ? "active" : ""}`} onClick={() => setFilter(null)}>All</button>
-                        {types.map(t => (
-                        <button key={t} className={`filter-tab ${filter === t ? "active" : ""}`} onClick={() => setFilter(t)}>{t}</button>
+                        {types.map(type => (
+                        <button key={type} className={`filter-tab ${filter === type ? "active" : ""}`} onClick={() => setFilter(type)}>{type}</button>
                         ))}
                     </div>
                 </div>
@@ -69,15 +70,15 @@ export default function ProjectPage() {
                             >
                             <div className="Beschrijving" id={`${project.id}Beschrijving`}>
                                 <div className="BeschrijvingInhoud">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
+                                <h3>{t(project.title)}</h3>
+                                <p>{t(project.description)}</p>
                                 {project.link !== "" && (project.linkType === "internal" ? (
                                     <NavLink to={project.link} className="nav_link" activeClassName="nav_link--active">
-                                    <button className="App-button">Lees meer</button>
+                                    <button className="App-button">{t("read_more")}</button>
                                     </NavLink>
                                 ) : (
                                     <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                    <button className="App-button">Bezoek de website</button>
+                                    <button className="App-button"> {t("visit_site")} </button>
                                     </a>
                                 )
                             )}

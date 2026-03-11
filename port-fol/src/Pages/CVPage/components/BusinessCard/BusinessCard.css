@@ -1,50 +1,71 @@
-.card {
+.BusinessCard {
   max-width: 560px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--color-primary);
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
-  background-color: white;
+  background-color: var(--color-primary);
 }
 
-.card-accent {
+.BusinessCard-accent {
   height: 4px;
-  background: linear-gradient(90deg, #2a7c6f, #4caf90);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
 }
 
-.card-body {
+.BusinessCard-body {
   padding: 28px 32px;
 }
 
-.card-name {
+.BusinessCard-name {
   margin: 0 0 10px;
   font-size: 32px;
-  color: black;
+  color: var(--color-secondary);
 }
 
-.card-title {
+.BusinessCard-title {
   margin: 0 0 20px;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2a7c6f;
+  color: var(--color-accent);
 }
 
-.card-details {
+.BusinessCard-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px 24px;
   font-size: 15px;
-  color: black;
+  color: var(--color-secondary);
 }
 
-.card-field {
+.BusinessCard-field {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.card-icon {
-  color: #2a7c6f;
+.BusinessCard-icon {
+  color: var(--color-accent);
   flex-shrink: 0;
+}
+
+@media screen and (max-width: 560px) {
+    /* Add responsive styles if needed */
+  .BusinessCard {
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+  }
+
+  .BusinessCard-details{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 460px) {
+    /* Add responsive styles if needed */
+    .BusinessCard{
+      max-width: 350px;
+    }
 }

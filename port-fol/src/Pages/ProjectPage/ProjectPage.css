@@ -7,7 +7,7 @@
 
 .PageTitle{
     text-transform: uppercase;
-    background-color: #F2F2F0;
+    background-color: var(--color-primary);
     font-weight: bold;
 }
 
@@ -48,19 +48,19 @@
 }
 
 .Project:nth-child(odd){
-    background-color:black;
-    color: white;
+    background-color:var(--color-secondary);
+    color: var(--color-primary);
     
 }
 .Project:nth-child(odd) .App-button{
-    color: black;
-    background-color: white;
-    border-color: grey;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-color: var(--color-muted);
 }
 .Project:nth-child(odd) .App-button:hover{
-    color: white;
-    background-color: black;
-    border-color: grey;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border-color: var(--color-muted);
 }
 
 /* For the second row, reverse the order */
@@ -68,7 +68,7 @@
     order: 2; /* Beschrijving on the right in odd rows */
     justify-content: center;
     align-items: flex-start;
-    color:white;
+    color:var(--color-primary);
 }
 
 .API{
@@ -81,11 +81,11 @@
 
 .Project:nth-child(odd) h3{
     text-align: start;
-    color:white;
+    color:var(--color-primary);
 }
 
 .Project:nth-child(even) h3{
-    color:#172601;
+    color:var(--color-secondary);
 }
 
 .Project:nth-child(odd) .EmbeddedProject {
@@ -116,7 +116,7 @@ iframe{
 
 .SoundCloudLinksDiv {
     font-size: 10px;
-    color: #F2F2F0;
+    color: var(--color-primary);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -167,14 +167,14 @@ iframe{
 }
 
 #ComingSoonAPI p{
-    background-color: #F2F2F0;
+    background-color: var(--color-primary);
     padding:20px;
 }
 
 .ProjectSocials{
     height:50px;
     width:50px;
-    background-color: red;
+    background-color: var(--color-accent);
 }
 
 p {
@@ -184,12 +184,12 @@ p {
 }
 
 h3{
-    color:black;
+    color:var(--color-secondary);
 }
 
 
 .SoundCloudLinksA {
-    color: #F2F2F0;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -206,10 +206,10 @@ h3{
 
 /*FILTER TAB VOLGENS AI*/
 .filter-toggle {
-  background: black;
-  border: 1px solid #2a7c6f;
+  background: var(--color-secondary);
+  border: 1px solid var(--color-accent);
   border-radius:5px;
-  color: white;
+  color: var(--color-primary);
     font-size: 14px;
     font-weight: 300;
   padding: 7px 16px;
@@ -222,9 +222,9 @@ h3{
 }
 
 .filter-toggle:hover {
-  border-color: black;
-  color: black;
-  background-color: white;
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
       font-size: 14px;
     font-weight: 300;
 }
@@ -272,19 +272,19 @@ h3{
   bottom: 0; left: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, #2a7c6f, #4caf90);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
   transition: width 0.25s ease;
 }
 
 .filter-tab:hover { 
-    color: #2a7c6f; 
+    color: var(--color-accent); 
 }
 .filter-tab:hover::after { 
     width: 100%; 
 }
 
 .filter-tab.active {
-  color: black;
+  color: var(--color-secondary);
   font-weight: 600;
 }
 
@@ -293,19 +293,19 @@ h3{
 /*INLEIDING VOLGENS AI*/
 .InleidingBox {
   padding: 80px 10%;
-  background-color: #F2F2F0;
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
 justify-content: center;
 align-items: center;
   gap: 24px;    
   min-height: 300px;
-  border-bottom: 3px solid #2a7c6f;
+  border-bottom: 3px solid var(--color-accent);
 }
 
 .Inleiding h1.PageTitle {
   font-size: 48px;
-  color: #111;
+  color: var(--color-secondary);
   margin-bottom: 12px;
   position: relative;
   display: inline-block;
@@ -317,12 +317,12 @@ align-items: center;
   display: block;
   width: 48px;
   height: 3px;
-  background: linear-gradient(90deg, #2a7c6f, #4caf90);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
   margin-top: 10px;
 }
 
 .Inleiding p {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--color-secondary);
   font-size: 15px;
   max-width: 560px;
   line-height: 1.7;

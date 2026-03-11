@@ -1,32 +1,28 @@
 import './HomePage.css';
 import ProfilePic from '../../Resources/img/SelfPortrait2.jpg'
-
+import { useTranslation } from 'react-i18next';
 import {NavLink} from 'react-router-dom';
 
-
 export function Introduction() {
+    
+    const { t } = useTranslation();
+
     //Component with text in it as wel as a profile picture
     return (
         <div class="content-column">
             <div class="text-content">
-                <h3>Hey! Ik ben Jule.</h3>
-                <p>Als een toegewijde softwareontwikkelaar, richt ik mij op het bevorderen 
-                    van gendergelijkheid en diversiteit binnen de technologische sector. 
-                    Met een passie voor het creëren van inclusieve en rechtvaardige oplossingen, 
-                    ben ik vastbesloten om mijn vaardigheden in te zetten om positieve verandering 
-                    te bewerkstelligen. Mijn streven is om innovatieve software te ontwikkelen die 
-                    niet alleen technologische vooruitgang vertegenwoordigt, maar ook bijdraagt aan 
-                    een meer diverse en inclusieve samenleving. (Bedankt ChatGPT) </p>
+                <h3>{t("home_title")}</h3>
+                <p>{t("home_intro")}</p>
             </div>
             <div className="homeButtons">
                 <NavLink to={"/Projects"} className="nav_link" activeClassName="nav_link--active">
-                    <button className='homePageBtn'> Mijn projecten </button>
+                    <button className='homePageBtn'> {t("nav_projects")} </button>
                 </NavLink>
                 <NavLink to={"/CurriculumVitae"} className="nav_link" activeClassName="nav_link--active">
-                    <button className='homePageBtn'> Mijn CV </button>
+                    <button className='homePageBtn'> {t("nav_cv")} </button>
                 </NavLink>
                 <NavLink to={"/Contact"} className="nav_link" activeClassName="nav_link--active">
-                    <button className='homePageBtn'> Contacteer mij </button>
+                    <button className='homePageBtn'> {t("nav_contact")} </button>
                 </NavLink>
                 
             </div>
