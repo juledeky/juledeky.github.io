@@ -1,0 +1,184 @@
+.ExperienceCard{
+    border: var(--color-primary);
+    border-style: solid;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color:var(--color-secondary);
+    /*width: 100%; /* fixed 50% width regardless of how many cards */
+    /*max-width: 500px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 0 0 calc(20% - 23px); /* don't grow, don't shrink, fixed 50% */
+    transition: height 0.4s ease, width 0.4s ease, border-radius 0.4s ease;
+    align-self: stretch;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width:300px;
+    width:fit-content;
+    
+}
+
+.ExperienceCard.expanded {
+    max-width:50%;
+    flex: 1 0 80%; /* grow to full row */
+    border-radius: 0%;
+}
+
+.BodyOfCard {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  
+}
+
+.BodyOfCard.open {
+  max-height: 500px; /* large enough to fit your content */
+}
+
+.HeadOfCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Titles{
+    display: flex;
+    flex-direction: column;
+    min-width:0;
+    flex:1;
+}
+
+.ExperienceCompany{
+    margin: 2px;
+}
+
+.ExperienceWorkTitle{
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Dates{
+    display: flex;
+    align-items: flex-start;
+    margin:0px;
+    text-align: end;
+    flex-shrink:0;
+}
+
+.ExperienceDate{
+    font-size: 12px;
+    color: #888;
+    font-weight: 400;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.BottomOfCard ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left:0px;
+    margin: 0px;
+}
+.BottomOfCard{
+    margin-block:15px;
+}
+
+li{
+    font-size: 12px;
+    color: #444;
+    line-height: 1.65;
+    padding-left: 2px;
+    position: relative;
+    font-weight: 400;
+    background:var(--color-primary);
+    border: 1px solid currentColor;
+    border-style: solid;
+    margin:2px;
+    padding: 1px;
+    padding-inline: 5px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.ExperienceSkills li{
+    background-color: #dbeafe; /* light blue */
+    color: #1e40af;
+}
+
+.ExperienceTechs li{
+    background-color: #dcfce7; /* light green */
+    color: #166534;
+}
+
+
+.ExperienceDescription li{
+    list-style: circle;
+    border-style: none;
+    margin-left: 20px;
+    text-align: left;
+}
+.ExperienceDescription{
+    list-style: circle;
+    border: none;
+    background-color: none;
+    margin-block: 20px;
+    
+}
+
+
+
+
+.Titles{
+    text-align: left;
+}
+
+.Titles .ExperienceCompany{
+    font-size: 14px;
+}
+.Titles .ExperienceWorkTitle{
+    font-size: 15px;
+    
+    font-weight: bold;
+}
+
+.ExperienceBtn{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: solid var(--color-primary) 0.5px;
+    padding: 8px;
+    width: 100px;
+    border:none;
+    align-self: center;
+    font-family: 'Verdana', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ExperienceBtn:hover{
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: solid var(--color-secondary) 0.5px;
+    padding: 8px;
+}
+
+.ExperienceCard.expanded .ExperienceBtn{
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: solid var(--color-secondary) 0.5px;
+    padding: 8px;
+}
+
+.ExperienceCard.expanded .ExperienceBtn:hover{
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: solid var(--color-secondary) 0.5px;
+    padding: 8px;
+}
+

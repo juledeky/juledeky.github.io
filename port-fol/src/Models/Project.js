@@ -17,8 +17,8 @@ export class Project{
 export const projects = [
 new Project ({
     id:"MCE",
-    title: "MCE Evergem - Service Rapport App",
-    description: "Na het starten met de opleiding Gender en Diversiteit, begon ik als jobstudent te werken bij MCE om een software applicatie te bouwen om hun administratieve lasten te verlichten.",
+    title: "projects.mce_title",
+    description: "projects.mce_description",
     link:"/MCEVERGEM",
     linkType:"internal",
     image:"",
@@ -28,8 +28,8 @@ new Project ({
 }),
 new Project({
     id:"HLG",
-    title: "Hubert Lampo Genootschap",
-    description: "Op vraag van de bestuursleden van het Hubert Lampo Genootschap verfris ik langzaam hun nieuwe website via Wordpress.",
+    title: "companies.hlg_name",
+    description: "projects.hlg_description",
     link:"https://hubertlampogenootschap.be",
     linkType:"external",
     image:"",
@@ -40,8 +40,8 @@ new Project({
 }),
 new Project({
     id:"Podcast",
-    title: "On Wine Podcast",
-    description: "Samen met Wies Ballekens maak ik sporadisch een aflevering van onze podcast On Wine. Wies houdt zich bezig met de inhoudelijke kant, en ik verzorg de technische aspecten. Beluister nu onze meest recente aflevering!",
+    title: "projects.podcast_title",
+    description: "projects.podcast_description",
     link:"",
     linkType:"",
     image:"",
@@ -53,19 +53,19 @@ new Project({
 }),
 new Project({
     id:"SoundcloudMusic",
-    title: "Muzikale creaties",
-    description: "Een van mijn vrijetijdsbestedingen is het creëren van muziek, hoewel het niet van professionele kwaliteit is, geniet ik er toch van als vorm van ontspanning. Voel je vrij om mijn nieuwste nummer te beluisteren.",
+    title: "projects.sc_title",
+    description: "projects.sc_description",
     link:"https://soundcloud.com/user-432649769",
     linkType:"external",
     image:"",
-    imageEmbedLinkFrame: {__html: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1648218918&color=ff5500"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-432649769" title="JD" target="_blank" style="color: #cccccc; text-decoration: none;">JD</a> · <a href="https://soundcloud.com/user-432649769/hardcore-brood" title="Hardcore Brood" target="_blank" style="color: #cccccc; text-decoration: none;">Hardcore Brood</a></div>'},
+    imageEmbedLinkFrame: {__html: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1648218918&color=ff5500"></iframe><div style="font-size: 10px; color: var(--color-primary);line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-432649769" title="JD" target="_blank" style="color: var(--color-primary); text-decoration: none;">JD</a> · <a href="https://soundcloud.com/user-432649769/hardcore-brood" title="Hardcore Brood" target="_blank" style="color: var(--color-primary); text-decoration: none;">Hardcore Brood</a></div>'},
     type:"Sound",
     socials:""
 }),
 new Project({
     id:"MusicPerformance",
-    title: "Muzikale optredens",
-    description: "Naast het opnemen en creëren van muziek, treed ik af en toe ook op.",
+    title: "projects.mp_title",
+    description: "projects.mp_description",
     link:"",
     linkType:"",
     image:"",
@@ -77,8 +77,8 @@ new Project({
 }),
 new Project({
     id:"ComingSoon",
-    title: "Mijn volgend project",
-    description: "Voor mijn aanstaande project zal ik een website ontwikkelen om de kunstwerken van mijn moeder te presenteren. Deze website zal dienen als een portfolio waarin haar diverse creaties worden tentoongesteld.",
+    title: "projects.nextproject_title",
+    description: "projects.nextproject_description",
     link:"",
     linkType:"",
     image:"",

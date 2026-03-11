@@ -5,11 +5,17 @@
     justify-items: center; /* Center items horizontally */
 }
 
+.PageTitle{
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    font-weight: bold;
+}
+
 .Project {
     display: flex;
     flex-direction: row;
     width: 100%; /* Take up full width of parent container */
-    min-height:350px;
+    min-height:600px;
     align-items: center;
     justify-content: center;
 }
@@ -17,7 +23,7 @@
 .Beschrijving,
 .EmbeddedProject {
     width: 600px; /* Each div takes up 50% of the row */
-    height: 400px; /* Adjust height as needed */
+    min-height: 300px; /* Adjust height as needed */
     display: flex;
     flex-direction: column;
     padding:20px;
@@ -42,19 +48,19 @@
 }
 
 .Project:nth-child(odd){
-    background-color:black;
-    color: white;
+    background-color:var(--color-secondary);
+    color: var(--color-primary);
     
 }
 .Project:nth-child(odd) .App-button{
-    color: black;
-    background-color: white;
-    border-color: grey;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-color: var(--color-muted);
 }
 .Project:nth-child(odd) .App-button:hover{
-    color: white;
-    background-color: black;
-    border-color: grey;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border-color: var(--color-muted);
 }
 
 /* For the second row, reverse the order */
@@ -62,7 +68,7 @@
     order: 2; /* Beschrijving on the right in odd rows */
     justify-content: center;
     align-items: flex-start;
-    color:white;
+    color:var(--color-primary);
 }
 
 .API{
@@ -75,11 +81,11 @@
 
 .Project:nth-child(odd) h3{
     text-align: start;
-    color:white;
+    color:var(--color-primary);
 }
 
 .Project:nth-child(even) h3{
-    color:#172601;
+    color:var(--color-secondary);
 }
 
 .Project:nth-child(odd) .EmbeddedProject {
@@ -110,7 +116,7 @@ iframe{
 
 .SoundCloudLinksDiv {
     font-size: 10px;
-    color: #F2F2F0;
+    color: var(--color-primary);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -121,7 +127,7 @@ iframe{
 #MCEAPI{
     background-image: url('../../Resources//img/ServiceRapportApp.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: left;
 }
 
@@ -161,14 +167,14 @@ iframe{
 }
 
 #ComingSoonAPI p{
-    background-color: #F2F2F0;
+    background-color: var(--color-primary);
     padding:20px;
 }
 
 .ProjectSocials{
     height:50px;
     width:50px;
-    background-color: red;
+    background-color: var(--color-accent);
 }
 
 p {
@@ -178,12 +184,12 @@ p {
 }
 
 h3{
-    color:black;
+    color:var(--color-secondary);
 }
 
 
 .SoundCloudLinksA {
-    color: #F2F2F0;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -198,25 +204,134 @@ h3{
     opacity: 0.7;
 }
 
-.InleidingBox{
-    margin-top: 0;
-    height:150px;
-    background-color: #F2F2F0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*FILTER TAB VOLGENS AI*/
+.filter-toggle {
+  background: var(--color-secondary);
+  border: 1px solid var(--color-accent);
+  border-radius:5px;
+  color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 300;
+  padding: 7px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s, color 0.2s;
+  min-width:150px;
 }
 
-.Inleiding{
-    max-width:75%;
-    margin: 12.5%;    
-    margin-top:2%;
-    margin-bottom: 0;
+.filter-toggle:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+      font-size: 14px;
+    font-weight: 300;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.filter-tabs.visible {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.filter-tab {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #555;
+  padding: 8px 16px 8px 4px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 16px;
+  transition: color 0.2s;
+}
+
+.filter-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  transition: width 0.25s ease;
+}
+
+.filter-tab:hover { 
+    color: var(--color-accent); 
+}
+.filter-tab:hover::after { 
+    width: 100%; 
+}
+
+.filter-tab.active {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.filter-tab.active::after { width: 100%; }
+
+/*INLEIDING VOLGENS AI*/
+.InleidingBox {
+  padding: 80px 10%;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+  gap: 24px;    
+  min-height: 300px;
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.Inleiding h1.PageTitle {
+  font-size: 48px;
+  color: var(--color-secondary);
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+/* teal accent line under title */
+.Inleiding h1.PageTitle::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  margin-top: 10px;
+}
+
+.Inleiding p {
+  color: var(--color-secondary);
+  font-size: 15px;
+  max-width: 560px;
+  line-height: 1.7;
 }
 
 .Dropdownmenu{
-    width:150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -226,15 +341,27 @@ h3{
         width: 100%;
     }
 
-    .Beschrijving{
+    .EmbeddedProject {
+        order: 0 !important;
+    }
+
+    .Beschrijving {
+        order: 1 !important;
+    }
+
+    .Beschrijving, .EmbeddedProject{
         width: 100%;
         padding: 0%;
         margin: 0%;
+        align-items: center;
+    }
+
+    .BeschrijvingInhoud{
+        align-self: center;
     }
 
     #PodcastBeschrijving, #SoundcloudBeschrijving, #NextProjectBeschrijving{
         align-items: center;
-        order: 0;
     }
 
     .Project:nth-child(even) .EmbeddedProject{

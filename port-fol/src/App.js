@@ -11,15 +11,26 @@ import {Route} from 'react-router-dom'
 import React, {useState} from 'react';
 import {Routes} from 'react-router-dom'
 import MCEVERGEMPage from './Pages/MCEVERGEMPage/MCEVERGEMPage'
+import { ConfigProvider, theme } from 'antd';
+import './i18n';
+import { useTranslation } from 'react-i18next';
+
 
 
 function App() {
+
+    const { t, i18n } = useTranslation();
+  console.log('Current language:', i18n.language);
+  console.log('Test translation:', t('nav_projects'));
+
   return (
+    <ConfigProvider theme={{ algorithm: [theme.darkAlgorithm, theme.compactAlgorithm]}}>
     <div className="App">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <HashRouter>
         <header className="App-header">
           <Navigation />
+
         </header>
           <div>
             <Routes>
@@ -35,28 +46,49 @@ function App() {
           <Footer />
       </HashRouter>
     </div>
+    </ConfigProvider>
   );
 }
 
 //      <button className="App-button"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Contact"> Contact me </NavLink></button>
 
 function Navigation() {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <nav className="App-nav">
-      <h4 className="Nav-titel">Jule Dekyvere</h4>
+        
+        <h1 className="Nav-titel">Jule Dekyvere</h1>
       <div className="NavigationMenu" onClick={() => {setMenuOpen(!menuOpen)}}>
-        <div class="fa fa-navicon" alt="Navigation menu"></div>
+        <div className="fa fa-navicon" alt="Navigation menu"></div>
       </div>
       <div className="App-buttons" id={menuOpen ? "open" : ""}>
-        <div >
-          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Home"> Home </NavLink></button>
-          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/Projects"> Projects </NavLink></button>
-          <button className="App-button-header"><NavLink activeClassName="nav_link--active" className="nav_link" to="/CurriculumVitae"> My CV </NavLink></button>
-        
-        
+        <div className="App-navbtns">
+          <NavLink className={({ isActive }) => isActive ? "nav_link nav_link--active" : "nav_link"} to="/Home" onClick={() => setMenuOpen(false)}>
+            <button className="App-button-header" >
+              {t("nav_home")}
+            </button>
+          </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "nav_link nav_link--active" : "nav_link"} to="/Projects" onClick={() => setMenuOpen(false)}>
+            <button className="App-button-header" >
+              {t("nav_projects")}
+            </button>
+          </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "nav_link nav_link--active" : "nav_link"} to="/CurriculumVitae" onClick={() => setMenuOpen(false)}>
+            <button className="App-button-header">
+              {t("nav_cv")}
+            </button>
+          </NavLink>
+        </div>
+        <div className="lang-switcher">
+          <button onClick={() => i18n.changeLanguage('nl')} className={i18n.language === 'nl' ? 'active' : ''}>NL</button>
+          <button onClick={() => i18n.changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>EN</button>
         </div>
       </div>
+      
     </nav>
   )
 }
@@ -64,6 +96,8 @@ function Navigation() {
 //<a href="https://www.instagram.com/onwinepodcast/" class="fa fa-instagram"></a>
 
 function Footer() {
+  
+  const { t } = useTranslation();
   return (
     <div className="App-footer">
       <div className="Footer-content">
@@ -71,7 +105,7 @@ function Footer() {
         <a href="https://www.linkedin.com/in/jule-dekyvere/" class="fa fa-linkedin" alt="Logo of LinkedIn"></a>
         <a href="https://github.com/juledek" class="fa fa-github" alt="Logo of github"></a>
         <a href="https://soundcloud.com/user-432649769" class="fa fa-soundcloud" alt="Logo of soundcloud"></a>
-        <p>Deze webpagina maakt geen gebruik van cookies en uw data wordt niet opgeslagen en/of doorverkocht.</p>
+        <p>{t("footer_message")}</p>
       </div>
     </div>
   );
