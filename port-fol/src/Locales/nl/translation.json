@@ -23,6 +23,26 @@
     "on_request":"Op aanvraag",
     "dateofbirth":"12 Oktober 2000",
 
+    "contact_messageSent_title":"Bericht verstuurd.",
+    "contact_messageSent_text":"Bedankt! Ik neem zo snel mogelijk contact met je op.",
+    "contact_intro":"Heb je een vraag, een project in gedachten, of wil je gewoon kennismaken? Stuur me een bericht en ik neem zo snel mogelijk contact op.",
+    "contact_name_lbl": "Naam",
+    "contact_mail_lbl":"E-mailadres",
+    "contact_subject_lbl":"Onderwerp",
+    "contact_subject_choose":"Kies een onderwerp",
+    "contact_subject_optionSD":"Software development",
+    "contact_subject_optionGK":"Geluidskunst",
+    "contact_subject_optionWT":"Samenwerking",
+    "contact_subject_optionElse": "Iets anders",
+    "contact_message_lbl": "Bericht",
+
+    "contact_sendMessageActive_btn":"Versturen...",
+    "contact_sendMessage_btn":"Verstuur bericht →",
+
+    "errorMessageMail":"Er ging iets mis. Probeer het opnieuw of mail me rechtstreeks op",
+
+
+
 
     "companies":{
         "hlg_name":"Hubert Lampo Genootschap",

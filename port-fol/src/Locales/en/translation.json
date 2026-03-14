@@ -23,6 +23,24 @@
     "on_request":"On request",
     "dateofbirth":"October 12th, 2000",
 
+    "contact_messageSent_title":"Message Sent.",
+    "contact_messageSent_text":"Thanks! I will contact you as soon as possible.",
+    "contact_intro":"Do you have a question, a project in mind, or would you simply like to get to know me? Send me a message and I’ll get back to you as soon as possible.",
+    "contact_name_lbl": "Name",
+    "contact_mail_lbl":"E-mailaddress",
+    "contact_subject_lbl":"Topic",
+    "contact_subject_choose":"Choose a topic",
+    "contact_subject_optionSD":"Software development",
+    "contact_subject_optionGK":"Soundart",
+    "contact_subject_optionWT":"Collaboration",
+    "contact_subject_optionElse": "Something else",
+    "contact_message_lbl": "Message",
+
+    "contact_sendMessageActive_btn":"Sending...",
+    "contact_sendMessage_btn":"Send message →",
+
+    "errorMessageMail":"Something went wrong. Please try again or email me directly at",
+    
     
     "companies":{
         "hlg_name":"Hubert Lampo Society",

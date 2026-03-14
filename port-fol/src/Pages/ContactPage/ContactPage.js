@@ -1,5 +1,7 @@
 import './ContactPage.css';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 const ACCESS_KEY = '83c609ab-697a-4392-bc9c-94d8ba474ff9';
 
@@ -19,7 +21,10 @@ const SUBJECTS = [
  
 
 export default function ContactPage() {
-const [fields, setFields] = useState(INITIAL_STATE);
+
+  const {t} = useTranslation();
+
+  const [fields, setFields] = useState(INITIAL_STATE);
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [errMsg, setErrMsg] = useState('');
  
@@ -72,8 +77,7 @@ const [fields, setFields] = useState(INITIAL_STATE);
         <h1 className="contact-title">Contact</h1>
         <hr className="contact-divider" />
         <p className="contact-intro">
-          Heb je een vraag, een project in gedachten, of wil je gewoon kennismaken?
-          Stuur me een bericht en ik neem zo snel mogelijk contact op.
+          {t("contact_intro")}
         </p>
       </div>
  
@@ -89,15 +93,15 @@ const [fields, setFields] = useState(INITIAL_STATE);
                     <polyline points="20 6 9 17 4 12" />
                 </svg>
                 </div>
-                <h3>Bericht verstuurd.</h3>
-                <p>Bedankt! Ik neem zo snel mogelijk contact met je op.</p>
+                <h3>{t("contact_messageSent_title")}</h3>
+                <p>{t("contacT_messageSent_text")}</p>
             </div>
             ) : (
                 <form className="contact-form" onSubmit={handleSubmit} noValidate>
         
                     <div className="form-row">
                     <div className="form-group">
-                        <label htmlFor="name">Naam</label>
+                        <label htmlFor="name">{t("contact_name_lbl")}</label>
                         <input
                         type="text"
                         id="name"
@@ -108,12 +112,12 @@ const [fields, setFields] = useState(INITIAL_STATE);
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">E-mailadres</label>
+                        <label htmlFor="email">{t("contact_mail_lbl")}</label>
                         <input
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="jouw@email.com"
+                        placeholder="mail@email.com"
                         value={fields.email}
                         onChange={handleChange}
                         />
@@ -121,14 +125,14 @@ const [fields, setFields] = useState(INITIAL_STATE);
                     </div>
         
                     <div className="form-group">
-                    <label htmlFor="subject">Onderwerp</label>
+                    <label htmlFor="subject">{t("contact_subject_lbl")}</label>
                     <select
                         id="subject"
                         name="subject"
                         value={fields.subject}
                         onChange={handleChange}
                     >
-                        <option value="" disabled>Kies een onderwerp</option>
+                        <option value="" disabled>{t("contact_subject_choose")}</option>
                         {SUBJECTS.map((s) => (
                         <option key={s} value={s}>{s}</option>
                         ))}
@@ -136,11 +140,11 @@ const [fields, setFields] = useState(INITIAL_STATE);
                     </div>
         
                     <div className="form-group">
-                    <label htmlFor="message">Bericht</label>
+                    <label htmlFor="message">{t("contact_message_lbl")}</label>
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Vertel me meer..."
+                        placeholder="..."
                         value={fields.message}
                         onChange={handleChange}
                     />
@@ -153,7 +157,7 @@ const [fields, setFields] = useState(INITIAL_STATE);
         
                     {status === 'error' && (
                     <p className="form-error">
-                        Er ging iets mis. Probeer het opnieuw of mail me rechtstreeks op{' '}
+                        {t("errorMessageMail")}{' '}
                         <a href="mailto:jule.dekyvere@protonmail.com">jule.dekyvere@protonmail.com</a>.
                     </p>
                     )}
@@ -163,7 +167,7 @@ const [fields, setFields] = useState(INITIAL_STATE);
                     className="contact-submit"
                     disabled={status === 'loading'}
                     >
-                    {status === 'loading' ? 'Versturen...' : 'Verstuur bericht →'}
+                    {status === 'loading' ? `${t("contact_sendMessageActive_btn")}` : `${t("contact_sendMessage_btn")}`}
                     </button>
         
                 </form>
