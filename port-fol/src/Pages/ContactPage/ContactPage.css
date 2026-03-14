@@ -1,5 +1,5 @@
 .ContactPage {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     min-height: 12vh;
     display: flex;
     flex-direction: column;
@@ -7,5 +7,252 @@
     justify-content: start;
     font-size: calc(10px + 2vmin);
     font-weight: lighter;
-    color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.contact-page{
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+/* ── Header ── */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+ 
+.contact-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #f0ece4;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+ 
+.contact-divider {
+  width: 48px;
+  height: 3px;
+  background: #2a9d72;
+  border: none;
+  margin: 0 auto 1.5rem;
+}
+ 
+.contact-intro {
+  font-size: 15px;
+  color: #888;
+  max-width: 480px;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+ 
+/* ── Card ── */
+.contact-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    margin-bottom: 100px;
+    background-color:var(--color-secondary);
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 640px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 2.5rem;
+  animation: cardIn 0.5s ease both;
+}
+ 
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* ── Form ── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+ 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+ 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+ 
+.form-group label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+ 
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: var(--color-primary);
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+ 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-muted);
+}
+ 
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #2a9d72;
+  background: var(--color-primary);
+  color: var(--color-muted);
+}
+ 
+.form-group textarea {
+  resize: none;
+  height: 130px;
+  line-height: 1.6;
+}
+ 
+.form-group select {
+  appearance: none;
+  cursor: pointer;
+}
+ 
+.form-group select option {
+  background: #1a1a1a;
+  color: #f0ece4;
+}
+ 
+.char-count {
+  font-size: 11px;
+  color: #3a3a3a;
+  text-align: right;
+}
+ 
+/* ── Errors ── */
+.form-error {
+  font-size: 13px;
+  color: darkred;
+  background: var(--color-primary);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  border-color: var(--color-muted);
+}
+ 
+.form-error a {
+  color: darkred;
+}
+ 
+/* ── Submit ── */
+.contact-submit {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--color-primary);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+}
+ 
+.contact-submit:hover:not(:disabled) { 
+    background: var(--color-secondary); 
+    color: var(--color-accent-light); 
+    border-color: var(--color-accent); 
+}
+
+.contact-submit:active:not(:disabled) { 
+    transform: scale(0.99); 
+}
+
+.contact-submit:disabled { 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+ 
+/* ── Success state ── */
+.contact-success {
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: cardIn 0.4s ease both;
+}
+ 
+.success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #2a9d72;
+  color: #2a9d72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+ 
+.success-icon svg {
+  width: 22px;
+  height: 22px;
+}
+ 
+.contact-success h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+ 
+.contact-success p {
+    text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+ 
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .contact-card { 
+    padding: 1.75rem 1.25rem; 
+    width: 300px;
+}
+  .form-row { 
+    grid-template-columns: 1fr; 
+}
+
+.contact-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header{
+    align-self: center;
+    width: 305px;
+}
+  
 }
