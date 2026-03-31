@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </svg>
                 </div>
                 <h3>{t("contact_messageSent_title")}</h3>
-                <p>{t("contacT_messageSent_text")}</p>
+                <p>{t("contact_messageSent_text")}</p>
             </div>
             ) : (
                 <form className="contact-form" onSubmit={handleSubmit} noValidate>

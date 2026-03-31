@@ -1,5 +1,10 @@
+
+import SRAScherm1 from '../Resources/img/SRA-Scherm1.png'
+import SRAScherm2 from '../Resources/img/SRA-Scherm2.png'
+import SRAWord from '../Resources/img/SRA-Word.png'
+
 export class Project{
-    constructor({id, title, description, link, linkType, image, imageEmbedLinkFrame, type, socials}) {
+    constructor({id, title, description, link, linkType, image, imageEmbedLinkFrame, type, socials, context, flowSteps, steps}) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -9,6 +14,9 @@ export class Project{
         this.image = image;
         this.ImageEmbedLinkFrame = imageEmbedLinkFrame;
         this.socials = socials;
+        this.flowSteps = flowSteps;
+        this.steps = steps;
+        this.context= context;
     }
 
 
@@ -19,12 +27,46 @@ new Project ({
     id:"MCE",
     title: "projects.mce_title",
     description: "projects.mce_description",
+    context:"MCE Evergem contacteerde mij via Randstad met de vraag om hun adminstratieve takenlast te verlichten. Ze beschrijven hun activiteit als het verkopen van een klantgerichte oplossing voor alle problemen wat betreft stroomuitval, spannings- variaties, blikseminslag, ….Voor het onderhoud van hun UPS systemen, worden er onderhoudswerken uitgevoerd waar de gegevens van de UPS systemen worden uitgelezen en geanalyseerd. Hiervoor stellen ze een 'Service Rapport' op. Het opstellen van dit formulier nam teveel tijd in beslag.",
     link:"/MCEVERGEM",
     linkType:"internal",
     image:"",
     imageEmbedLinkFrame: {},
     type:"Software",
-    socials:""
+    socials:"",
+    flowSteps: [
+        { label: 'Onderhoud machine: Service Rapport nodig' },
+        { label: 'Data machine & klant' },
+        { label: 'Upload Excel in app' },
+        { label: 'Data nakijken & aanvullen' },
+        { label: 'Genereer Word of PDF' },
+    ],
+    steps: [
+        {
+        title: 'CSV uploaden & machine kiezen',
+        description: `Op het beginscherm kan de gebruiker een CSV bestand uploaden
+            met de metingen van een machine. Daarna duidt de gebruiker het type
+            machine aan (mono- of driefase), waarna het volgende scherm zich aanpast.`,
+        imageSrc: SRAScherm1,
+        imageAlt: 'Stap 1 — upload scherm',
+        },
+        {
+        title: 'Gegevens nakijken & aanvullen',
+        description: `Het volgende scherm toont klantengegevens, MCE-gegevens,
+            machinegegevens en metingen. Alle data uit de CSV wordt automatisch
+            ingevuld. De gebruiker kan aanvullen en kiezen tussen PDF of Word.`,
+        imageSrc: SRAScherm2,
+        imageAlt: 'Stap 2 — editor scherm',
+        },
+        {
+        title: 'Word of PDF genereren',
+        description: `De applicatie genereert een opgemaakt Word- of PDF-bestand
+            met alle gegevens in de juiste layout. Tegelijk wordt een JSON-bestand
+            aangemaakt voor eventuele verdere verwerking.`,
+        imageSrc: SRAWord,
+        imageAlt: 'Stap 3 — gegenereerd rapport',
+        }
+    ]
 }),
 new Project({
     id:"HLG",
