@@ -27,7 +27,7 @@ new Project ({
     id:"MCE",
     title: "projects.mce_title",
     description: "projects.mce_description",
-    context:"MCE Evergem contacteerde mij via Randstad met de vraag om hun adminstratieve takenlast te verlichten. Ze beschrijven hun activiteit als het verkopen van een klantgerichte oplossing voor alle problemen wat betreft stroomuitval, spannings- variaties, blikseminslag, ….Voor het onderhoud van hun UPS systemen, worden er onderhoudswerken uitgevoerd waar de gegevens van de UPS systemen worden uitgelezen en geanalyseerd. Hiervoor stellen ze een 'Service Rapport' op. Het opstellen van dit formulier nam teveel tijd in beslag.",
+    context:"mce_details.context_description",
     link:"/MCEVERGEM",
     linkType:"internal",
     image:"",
@@ -35,34 +35,28 @@ new Project ({
     type:"Software",
     socials:"",
     flowSteps: [
-        { label: 'Onderhoud machine: Service Rapport nodig' },
-        { label: 'Data machine & klant' },
-        { label: 'Upload Excel in app' },
-        { label: 'Data nakijken & aanvullen' },
-        { label: 'Genereer Word of PDF' },
+        { label: "mce_details.flowStapEen" },
+        { label: "mce_details.flowStapTwee" },
+        { label: "mce_details.flowStapDrie" },
+        { label: "mce_details.flowStapVier" },
+        { label: "mce_details.flowStapVijf" },
     ],
     steps: [
         {
-        title: 'CSV uploaden & machine kiezen',
-        description: `Op het beginscherm kan de gebruiker een CSV bestand uploaden
-            met de metingen van een machine. Daarna duidt de gebruiker het type
-            machine aan (mono- of driefase), waarna het volgende scherm zich aanpast.`,
+        title: "mce_details.uitgebreideUitlegStap1_titel",
+        description: "mce_details.uitgebreideUitlegStap1_uitleg",
         imageSrc: SRAScherm1,
         imageAlt: 'Stap 1 — upload scherm',
         },
         {
-        title: 'Gegevens nakijken & aanvullen',
-        description: `Het volgende scherm toont klantengegevens, MCE-gegevens,
-            machinegegevens en metingen. Alle data uit de CSV wordt automatisch
-            ingevuld. De gebruiker kan aanvullen en kiezen tussen PDF of Word.`,
+        title: "mce_details.uitgebreideUitlegStap2_titel",
+        description: "mce_details.uitgebreideUitlegStap2_uitleg",
         imageSrc: SRAScherm2,
         imageAlt: 'Stap 2 — editor scherm',
         },
         {
-        title: 'Word of PDF genereren',
-        description: `De applicatie genereert een opgemaakt Word- of PDF-bestand
-            met alle gegevens in de juiste layout. Tegelijk wordt een JSON-bestand
-            aangemaakt voor eventuele verdere verwerking.`,
+        title: "mce_details.uitgebreideUitlegStap3_titel",
+        description: "mce_details.uitgebreideUitlegStap3_uitleg",
         imageSrc: SRAWord,
         imageAlt: 'Stap 3 — gegenereerd rapport',
         }

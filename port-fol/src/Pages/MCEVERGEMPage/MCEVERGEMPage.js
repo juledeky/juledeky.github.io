@@ -106,9 +106,11 @@ export default function MCEvergemPage() {
 
 function FlowDiagram({ steps }) {
 
+  const { t } = useTranslation();
+
   console.log(steps);
   const BOX_W = 140;
-  const BOX_H = 48;
+  const BOX_H = 70;
   const GAP   = 40;
   const ARROW = 14;
   const PAD   = 24;
@@ -160,7 +162,7 @@ function FlowDiagram({ steps }) {
             <foreignObject x={x + 6} y={cy - BOX_H / 2} width={BOX_W - 12} height={BOX_H}>
               <div xmlns="http://www.w3.org/1999/xhtml" className="flow-label"
                 style={{ color: isFirst || isLast ? '#000' : '#f0ece4' }}>
-                {step.label}
+                {t(step.label)}
               </div>
             </foreignObject>
           </g>
@@ -184,7 +186,7 @@ function StepCard({ number, title, description, imageSrc, imageAlt }) {
           <span>{String(number).padStart(2, '0')}</span>
         </div>
         <h3 className="step-title">{t(title)}</h3>
-        <p className="step-desc">{description}</p>
+        <p className="step-desc">{t(description)}</p>
       </div>
       {imageSrc && (
         <div className="step-card__visual">
@@ -262,7 +264,7 @@ export default function MCEVERGEMPage({ project }) {
           <div className="pd-section__inner pd-section__inner--prose">
             <p className="section-label">Context</p>
             <hr className="section-divider" />
-            <p className="pd-body">{context}</p>
+            <p className="pd-body">{t(context)}</p>
           </div>
         </section>
       )}
@@ -284,7 +286,7 @@ export default function MCEVERGEMPage({ project }) {
       {steps.length > 0 && (
         <section className="pd-section pd-steps">
           <div className="pd-section__inner">
-            <p className="section-label">Uitgebreide uitleg</p>
+            <p className="section-label">{t("more_explanation")}</p>
             <hr className="section-divider" />
             <div className="steps-list">
               {steps.map((step, i) => (

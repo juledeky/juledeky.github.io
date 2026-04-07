@@ -6,7 +6,7 @@
     "nav_contact":"Contact",
     "footer_message":"This webpage does not use cookies and your data will not be stored and/or resold.",
     "home_title": "Hey! I'm Jule.",
-    "home_intro": "As a dedicated software developer, I focus on promoting gender equality and diversity within the technology sector. With a passion for creating inclusive and equitable solutions, I am determined to use my skills to bring about positive change. My goal is to develop innovative software that not only represents technological progress, but also contributes to a more diverse and inclusive society. (Thank you ChatGPT)",
+    "home_intro": "As someone with interest in technology and gender and diversity, I have a passion for creating inclusive and equitable solutions and I'm determined to use my skills to bring about positive change. My goal is to develop innovative software that not only represents technological progress, but also contributes to a more diverse and inclusive society. This website explains my experience and projects a bit further, but is still a work in progress. If you encounter any issues, please contact me! Thank you and enjoy looking around :)",
 
     "proj_title": "Projects",
     "proj_intro": "I am interested in a variety of topics, which can be divided into two recurring themes: software development and sound art. Below you will find an overview of my projects.",
@@ -41,6 +41,7 @@
 
     "errorMessageMail":"Something went wrong. Please try again or email me directly at",
     
+    "more_explanation":"Detailed explanation",
     
     "companies":{
         "hlg_name":"Hubert Lampo Society",
@@ -108,6 +109,21 @@
 
         "UGENT_workTitle": "Master in Gender and Diversity",
         "UGENT_description": "Specialisation in web and mobile applications, Bachelor's thesis: Digital accessibility of Flemish mobile (government) applications for users with a visual impairment."
+    },
+
+    "mce_details":{
+            "context_description":"MCE Evergem contacted me via Randstad asking me to help reduce their administrative workload. They describe their business as providing a customer-focused solution for all issues relating to power cuts, voltage fluctuations, lightning strikes, etc. As part of the maintenance of their UPS systems, maintenance work is carried out to read and analyse the data from the UPS systems. For this, they draw up a ‘Service Report’. Completing this form was taking up too much time.",
+            "flowStapEen":"Machine maintenance: Service report required",
+            "flowStapTwee":"Data machine and client",
+            "flowStapDrie":"Upload Excel in app",
+            "flowStapVier":"Review and update data",
+            "flowStapVijf":"Generate Word or PDF",
+            "uitgebreideUitlegStap1_titel":"Upload CSV and choose machine",
+            "uitgebreideUitlegStap1_uitleg":"On the home screen, the user can upload a CSV file containing a machine’s measurements. The user then selects the machine type (single-phase or three-phase), after which the next screen updates accordingly.",
+            "uitgebreideUitlegStap2_titel":"Review and update data",
+            "uitgebreideUitlegStap2_uitleg":"The following screen displays customer details, MCE data, machine data and measurements. All data from the CSV file is automatically populated. The user can add further details and choose between PDF or Word.",
+            "uitgebreideUitlegStap3_titel":"Generate Word or PDF file",
+            "uitgebreideUitlegStap3_uitleg":"The application generates a formatted Word or PDF file containing all the data in the correct layout. At the same time, a JSON file is created for any further processing."
     }
 
 
