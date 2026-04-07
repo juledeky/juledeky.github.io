@@ -1,5 +1,10 @@
+
+import SRAScherm1 from '../Resources/img/SRA-Scherm1.png'
+import SRAScherm2 from '../Resources/img/SRA-Scherm2.png'
+import SRAWord from '../Resources/img/SRA-Word.png'
+
 export class Project{
-    constructor({id, title, description, link, linkType, image, imageEmbedLinkFrame, type, socials}) {
+    constructor({id, title, description, link, linkType, image, imageEmbedLinkFrame, type, socials, context, flowSteps, steps}) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -9,6 +14,9 @@ export class Project{
         this.image = image;
         this.ImageEmbedLinkFrame = imageEmbedLinkFrame;
         this.socials = socials;
+        this.flowSteps = flowSteps;
+        this.steps = steps;
+        this.context= context;
     }
 
 
@@ -19,12 +27,40 @@ new Project ({
     id:"MCE",
     title: "projects.mce_title",
     description: "projects.mce_description",
+    context:"mce_details.context_description",
     link:"/MCEVERGEM",
     linkType:"internal",
     image:"",
     imageEmbedLinkFrame: {},
     type:"Software",
-    socials:""
+    socials:"",
+    flowSteps: [
+        { label: "mce_details.flowStapEen" },
+        { label: "mce_details.flowStapTwee" },
+        { label: "mce_details.flowStapDrie" },
+        { label: "mce_details.flowStapVier" },
+        { label: "mce_details.flowStapVijf" },
+    ],
+    steps: [
+        {
+        title: "mce_details.uitgebreideUitlegStap1_titel",
+        description: "mce_details.uitgebreideUitlegStap1_uitleg",
+        imageSrc: SRAScherm1,
+        imageAlt: 'Stap 1 — upload scherm',
+        },
+        {
+        title: "mce_details.uitgebreideUitlegStap2_titel",
+        description: "mce_details.uitgebreideUitlegStap2_uitleg",
+        imageSrc: SRAScherm2,
+        imageAlt: 'Stap 2 — editor scherm',
+        },
+        {
+        title: "mce_details.uitgebreideUitlegStap3_titel",
+        description: "mce_details.uitgebreideUitlegStap3_uitleg",
+        imageSrc: SRAWord,
+        imageAlt: 'Stap 3 — gegenereerd rapport',
+        }
+    ]
 }),
 new Project({
     id:"HLG",

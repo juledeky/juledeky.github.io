@@ -6,7 +6,7 @@
     "nav_contact":"Contact",
     "footer_message": "Deze webpagina maakt geen gebruik van cookies en uw data wordt niet opgeslagen en/of doorverkocht.",
     "home_title": "Hey! Ik ben Jule",
-    "home_intro": "Als een toegewijde softwareontwikkelaar, richt ik mij op het bevorderen van gendergelijkheid en diversiteit binnen de technologische sector. Met een passie voor het creëren van inclusieve en rechtvaardige oplossingen, ben ik vastbesloten om mijn vaardigheden in te zetten om positieve verandering te bewerkstelligen. Mijn streven is om innovatieve software te ontwikkelen die niet alleen technologische vooruitgang vertegenwoordigt, maar ook bijdraagt aan een meer diverse en inclusieve samenleving. (Bedankt ChatGPT)",
+    "home_intro": "Als iemand met interesse in technologie, gender en diversiteit heb ik een passie voor het bedenken van inclusieve en rechtvaardige oplossingen, en ik ben vastbesloten mijn vaardigheden in te zetten om positieve verandering teweeg te brengen. Mijn doel is om innovatieve software te ontwikkelen die niet alleen technologische vooruitgang betekent, maar ook bijdraagt aan een meer diverse en inclusieve samenleving. Op deze website vind je wat meer informatie over mijn ervaring en projecten, maar de site is nog in ontwikkeling. Mocht je problemen tegenkomen, neem dan gerust contact met me op! Bedankt en veel plezier met rondkijken :)",
 
     "proj_title": "Projecten",
     "proj_intro": "Verschillende onderwerpen houden mij bezig, en zijn verspreid over twee steeds terugkomende onderwerpen; sofware development en geluidskunst. Hieronder vindt u een overzicht van mijn projecten.",
@@ -22,6 +22,26 @@
     "cv_volunteering":"Vrijwilligerswerk",
     "on_request":"Op aanvraag",
     "dateofbirth":"12 Oktober 2000",
+
+    "contact_messageSent_title":"Bericht verstuurd.",
+    "contact_messageSent_text":"Bedankt! Ik neem zo snel mogelijk contact met je op.",
+    "contact_intro":"Heb je een vraag, een project in gedachten, of wil je gewoon kennismaken? Stuur me een bericht en ik neem zo snel mogelijk contact op.",
+    "contact_name_lbl": "Naam",
+    "contact_mail_lbl":"E-mailadres",
+    "contact_subject_lbl":"Onderwerp",
+    "contact_subject_choose":"Kies een onderwerp",
+    "contact_subject_optionSD":"Software development",
+    "contact_subject_optionGK":"Geluidskunst",
+    "contact_subject_optionWT":"Samenwerking",
+    "contact_subject_optionElse": "Iets anders",
+    "contact_message_lbl": "Bericht",
+
+    "contact_sendMessageActive_btn":"Versturen...",
+    "contact_sendMessage_btn":"Verstuur bericht →",
+
+    "errorMessageMail":"Er ging iets mis. Probeer het opnieuw of mail me rechtstreeks op",
+
+    "more_explanation":"Uitgebreide uitleg",
 
 
     "companies":{
@@ -90,5 +110,22 @@
 
         "UGENT_workTitle": "Master in Gender en Diversiteit",
         "UGENT_description": "Afstudeerrichting web- en mobiele applicaties, Bachelorproef: Digitale toegankelijkheid van Vlaamse mobiele (overheids)applicaties voor gebruikers met een visuele beperking."
+    },
+
+    "mce_details":{
+            "context_description":"MCE Evergem contacteerde mij via Randstad met de vraag om hun administratieve takenlast te verlichten. Ze beschrijven hun activiteit als het verkopen van een klantgerichte oplossing voor alle problemen wat betreft stroomuitval, spannings- variaties, blikseminslag, ….Voor het onderhoud van hun UPS systemen, worden er onderhoudswerken uitgevoerd waar de gegevens van de UPS systemen worden uitgelezen en geanalyseerd. Hiervoor stellen ze een 'Service Rapport' op. Het opstellen van dit formulier nam teveel tijd in beslag.",
+            "flowStapEen":"Onderhoud machine: Service Rapport nodig",
+            "flowStapTwee":"Data machine en klant",
+            "flowStapDrie":"Upload Excel in app",
+            "flowStapVier":"Data nakijken en aanvullen",
+            "flowStapVijf":"Genereer Word of PDF",
+            "uitgebreideUitlegStap1_titel":"CSV uploaden & machine kiezen",
+            "uitgebreideUitlegStap1_uitleg":"Op het beginscherm kan de gebruiker een CSV bestand uploaden met de metingen van een machine. Daarna duidt de gebruiker het type machine aan (mono- of driefase), waarna het volgende scherm zich aanpast.",
+            "uitgebreideUitlegStap2_titel":"Gegevens nakijken & aanvullen",
+            "uitgebreideUitlegStap2_uitleg":"Het volgende scherm toont klantengegevens, MCE-gegevens, machinegegevens en metingen. Alle data uit de CSV wordt automatisch ingevuld. De gebruiker kan aanvullen en kiezen tussen PDF of Word.",
+            "uitgebreideUitlegStap3_titel":"Word of PDF bestand genereren",
+            "uitgebreideUitlegStap3_uitleg":"De applicatie genereert een opgemaakt Word- of PDF-bestand met alle gegevens in de juiste layout. Tegelijk wordt een JSON-bestand aangemaakt voor eventuele verdere verwerking."
     }
+
+    
 }

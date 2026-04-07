@@ -82,6 +82,11 @@ function Navigation() {
               {t("nav_cv")}
             </button>
           </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "nav_link nav_link--active" : "nav_link"} to="/Contact" onClick={() => setMenuOpen(false)}>
+            <button className="App-button-header">
+              {t("nav_contact")}
+            </button>
+          </NavLink>
         </div>
         <div className="lang-switcher">
           <button onClick={() => i18n.changeLanguage('nl')} className={i18n.language === 'nl' ? 'active' : ''}>NL</button>

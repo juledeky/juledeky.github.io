@@ -1,223 +1,269 @@
-.MCEVERGEMPage {
-    display: flex;
-    flex-direction: column;
-    justify-items: center; /* Center items horizontally */
+.pd-page {
+  background: #000;
+  color: #f0ece4;
+  font-family: inherit;
+  min-height: 100vh;
 }
 
-.Title{
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-}
-.Title h1{
-    font-weight: bold;
-}
-
-.ProjectLinks{
-    padding: 1%;
-    background-color: var(--color-secondary);
-    border-bottom: 1px solid var(--color-secondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.ProjectLinks .fa {
-  font-size: 30px;
-  width: 50px;
+/* ── Hero ── */
+.pd-hero {
+  background: #000;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 5rem 1.5rem 4rem;
   text-align: center;
+}
+ 
+.pd-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+ 
+.pd-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+ 
+.pd-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2a9d72;
+  border: 1px solid #2a9d72;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+ 
+.pd-tag img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+ 
+.pd-title {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #f0ece4;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+ 
+.pd-subtitle {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+ 
+.pd-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+ 
+.pd-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-secondary);
+  color: #f0ece4;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.2s, color 0.2s;
 }
-
-.ProjectLinks img{
-    max-height: 30px;
-    width: auto;
-    border: none;
+ 
+.pd-link-btn:hover {
+  border-color: #2a9d72;
+  color: #2a9d72;
 }
-
-.ProjectLinks .IconBg{
-    background-color:var(--color-primary);
-    border-radius: 50%;
-    padding: 5px;
-    display: flex;
-     justify-content: center;
+ 
+.pd-link-btn__icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: invert(1);
 }
-.ProjectLinks .IconGh{
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
+ 
+/* ── Sections ── */
+.pd-section {
+  padding: 5rem 1.5rem;
+  border-bottom: 1px solid #111;
 }
-
-.ProjectLinks .fa:hover {
-  opacity: 0.7;
+ 
+.pd-section__inner {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-
-.ProjectLinks div{
-    margin-left: 15px;
+ 
+.pd-section__inner--prose {
+  max-width: 680px;
 }
-
-
-.Container{
-    margin-inline: 10%;
-    max-width: 80%;
-    background-color: var(--color-primary);
-    display: flex;
-    flex-direction: row;
+ 
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2a9d72;
+  margin-bottom: 0.5rem;
 }
-
-.Container img{
-    height: 150px;
-    width: auto;
+ 
+.section-divider {
+  width: 40px;
+  height: 2px;
+  background: #2a9d72;
+  border: none;
+  margin: 0 0 2rem;
 }
-
-.Beschrijving,
-.EmbeddedProject {
-    height: 200px; /* Adjust height as needed */
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    padding-top: 0%;
-    padding-bottom: 0%;
-    /*align-items: flex-end; /* Center content vertically */
+ 
+.pd-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #aaa;
 }
-
-.Beschrijving { /*LEFT*/
-    color: var(--color-secondary);
-    justify-content: center; /* Center content horizontally */
-    padding-right:20px;
+ 
+/* ── Flow diagram ── */
+.flow-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
-
-.EmbeddedProject { /*RIGHT*/
-    /* background-color: white; */
-    width: 75%;
-    justify-content: center; /* Center content horizontally */
-    padding-left:20px;
-    
+ 
+.flow-svg {
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  height: auto;
 }
-
-
-.Project h3{
-    text-align: end;
+ 
+.flow-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
 }
-
-
-.BeschrijvingInhoud{
-    max-width: 80%;
-    height:90%;
+ 
+/* ── Steps ── */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
-
-iframe{
-    width:80%;
+ 
+.step-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
-
-p {
-    font-size: calc(10px + 0.5vmin);
-    text-align: justify;
-    border-radius: 1%;
+ 
+.step-card--reverse {
+  direction: rtl;
 }
-
-h3{
-    color:var(--color-secondary);
+ 
+.step-card--reverse > * {
+  direction: ltr;
 }
-
-img{
-    border: 1px solid var(--color-secondary);
+ 
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #2a9d72;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
 }
-
-.fa {
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-color:var(--color-primary);
-    border-radius: 25%;
+ 
+.step-number span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2a9d72;
+  letter-spacing: 0.05em;
 }
-
-.fa:hover {
-    opacity: 0.7;
+ 
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f0ece4;
+  margin-bottom: 1rem;
 }
-
-
-.UitbreidingFlowchart{
-    background-color: var(--color-primary);
+ 
+.step-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #888;
 }
-
-.Uitbreiding img{
-    width:90%;
-    margin:5%;
-    margin-top:2%;
+ 
+/* ── App window frame ── */
+.app-window {
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f0f0f;
 }
-
-.Uitbreiding h2{
-    padding-top: 3%;
+ 
+.app-window__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #161616;
+  border-bottom: 1px solid #222;
 }
-
-.UitgebreideUitleg{
-    margin-top:5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ 
+.app-window__bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  display: block;
 }
-
-#Image{
-    display: flex;
-    flex-direction: column;
+ 
+.app-window__bar span:nth-child(1) { background: #ff5f57; }
+.app-window__bar span:nth-child(2) { background: #febc2e; }
+.app-window__bar span:nth-child(3) { background: #28c840; }
+ 
+.app-window img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
-.Stap{
-    min-width: 80%;
-    max-width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.Stap img{
-    width: auto;
-    padding-right:0;
-    margin-right: 0;
-    height:350px;
-    margin-top: 5%;
-    border: 5px solid black;
-}
-
-#Uitleg {
-    padding-right:2%;
-}
-
-@media only screen and (max-width: 768px) {
-    /* Add responsive styles if needed */
-    .Project{
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .Beschrijving{
-        width: 100%;
-        padding: 0%;
-        margin: 0%;
-    }
-
-    #PodcastBeschrijving, #SoundcloudBeschrijving, #NextProjectBeschrijving{
-        align-items: center;
-        order: 0;
-    }
-
-    .Project:nth-child(even) .EmbeddedProject{
-        width: 100%;
-        align-items: center;
-        padding:0%;
-    }
-
-    .Project:nth-child(odd) .EmbeddedProject{
-        width: 100%;
-        align-items: center;
-        padding: 0%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Add responsive styles if needed */
+ 
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .step-card,
+  .step-card--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+ 
+  .step-card--reverse .step-card__visual {
+    order: -1;
+  }
+ 
+  .pd-section {
+    padding: 3.5rem 1.25rem;
+  }
 }
